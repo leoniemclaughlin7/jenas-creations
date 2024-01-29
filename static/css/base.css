@@ -6,7 +6,20 @@ body {
     padding-top: 50px;
 }
 
-.navbar {
-    background-color: aqua;
+.navbar-brand {
+    margin-left: 15px;
+}
+
+.center-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-main {
+    background-color: pink;
+}
+
+.links {
+    color: pink;
 }
 
