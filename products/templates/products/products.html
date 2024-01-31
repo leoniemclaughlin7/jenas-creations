@@ -5,13 +5,44 @@
 {% endblock %}
 
 {% block content %}
-<div class="card" style="width: 18rem;">
-    {% for product in products %}
-    <img src="{{ product.image_url }}" class="card-img-top" alt="{ product.name }">
-    <div class="card-body">
-      <h5 class="card-title">{{ product.name }}</h5>
-      <p class="card-text">&euro;{{ product.price }}</p>
+<section class="container">
+    <div class="row">
+        <div class="text-center">
+            <h2>Products</h2>
+        </div>
     </div>
-    {% endfor %}
-  </div>
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <a href="">
+                                <img class="card-img-top card-imaged-sized" src="{{ product.image_url }}" alt="{{ product.name }}">
+                            </a>
+                            <div class="card-body">
+                                <p>{{ product.name }}</p>
+                                <hr>
+                                <p><strong>&euro;{{ product.price }}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Taken from the Boutique Ado walkthrough project-->
+                    {% if forloop.counter|divisibleby:1 %}
+                        <div class="col-12 d-sm-none mb-5"></div>
+                    {% endif %}                        
+                    {% if forloop.counter|divisibleby:2 %}
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5"></div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:3 %}
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-5"></div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:4 %}
+                        <div class="col-12 d-none d-xl-block mb-5"></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+  </section>
 {% endblock %}
