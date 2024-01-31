@@ -54,8 +54,16 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'products' %}">All Products</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categories
+                    </a>
+                    <ul class="dropdown-menu">
+                        <a href="{% url 'products' %}?category=Bracelets" class="dropdown-item">Bracelets</a>
+                        <a href="{% url 'products' %}?category=Phone Charms" class="dropdown-item">Phone Charms</a>
+                        <a href="{% url 'products' %}?category=Earrings" class="dropdown-item">Earrings</a>
+                        <a href="{% url 'products' %}?category=Necklaces" class="dropdown-item">Necklaces</a>
+                    </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
