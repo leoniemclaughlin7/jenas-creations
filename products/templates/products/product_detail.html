@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div>
+                        <a href="{{ product.image_url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+                        </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div>
+                    <p><strong>{{ product.name }}</strong></p>
+                    <p>{{ product.description }}</p>
+                    <hr>
+                    <p><strong>&euro;{{ product.price }}</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
