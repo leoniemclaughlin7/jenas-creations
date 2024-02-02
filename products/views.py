@@ -7,11 +7,20 @@ def all_products(request):
     products = Product.objects.all()
     categories = None
 
+    
+
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+        
+        if 'sort' in request.GET:
+            sort_key = request.GET['sort']
+            if sort_key == 'price':
+                products = products.order_by('price')
+            else:
+                products = products.order_by('-price')
 
     context = {
         'products': products,
