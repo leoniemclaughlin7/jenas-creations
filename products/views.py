@@ -8,6 +8,7 @@ def all_products(request):
 
     products = Product.objects.all()
     categories = None
+    search_query = None
 
     if request.GET:
         if 'category' in request.GET:
@@ -23,9 +24,9 @@ def all_products(request):
                 products = products.order_by('-price')
 
         if 'query' in request.GET:
-            searchQuery = request.GET['query']
-            if searchQuery:
-                queries = Q(name__icontains=searchQuery) | Q(description__icontains=searchQuery)
+            search_query = request.GET['query']
+            if search_query:
+                queries = Q(name__icontains=search_query) | Q(description__icontains=search_query)
                 products = products.filter(queries)
             else:
                 messages.error(request, "Please enter search criteria!")
@@ -35,6 +36,7 @@ def all_products(request):
     context = {
         'products': products,
         'current_categories': categories,
+        'search_query': search_query,
     }
 
     return render(request, 'products/products.html', context)
