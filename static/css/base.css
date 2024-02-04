@@ -3,11 +3,19 @@ html {
 }
 
 body {
-    padding-top: 70px;
+    padding-top: 135px;
 }
 
 .navbar-brand {
     margin-left: 15px;
+}
+
+.navbar-expand-lg {
+    justify-content: center;
+}
+
+.nav-item.active a.nav-link {
+    color: pink;
 }
 
 .center-form {
