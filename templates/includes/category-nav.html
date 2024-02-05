@@ -4,16 +4,16 @@
     <div class="col">
       <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item {% for category in current_categories %}{% if category.name == 'Bracelets' %}active{% endif %}{% endfor %}">
-          <a class="nav-link" href="{% url 'products' %}?category=Bracelets" class="dropdown-item">Bracelets</a>
+          <a class="nav-link" href="{% url 'products' %}?category=Bracelets">Bracelets</a>
         </li>
         <li class="nav-item {% for category in current_categories %}{% if category.name == 'Phone Charms' %}active{% endif %}{% endfor %}">
-          <a class="nav-link" href="{% url 'products' %}?category=Phone Charms" class="dropdown-item">Phone Charms</a>
+          <a class="nav-link" href="{% url 'products' %}?category=Phone Charms">Phone Charms</a>
         </li>
         <li class="nav-item {% for category in current_categories %}{% if category.name == 'Earrings' %}active{% endif %}{% endfor %}">
-          <a class="nav-link" href="{% url 'products' %}?category=Earrings" class="dropdown-item">Earrings</a>
+          <a class="nav-link" href="{% url 'products' %}?category=Earrings">Earrings</a>
         </li>
         <li class="nav-item {% for category in current_categories %}{% if category.name == 'Necklaces' %}active{% endif %}{% endfor %}">
-          <a class="nav-link" href="{% url 'products' %}?category=Necklaces" class="dropdown-item">Necklaces</a>
+          <a class="nav-link" href="{% url 'products' %}?category=Necklaces">Necklaces</a>
         </li>
       </ul>
     </div>

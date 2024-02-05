@@ -82,9 +82,10 @@
                   </li>
                 </ul>
                 <form method="GET" action="{% url 'products' %}" class="d-flex">
+                  <button class="btn btn-main mr-2" type="submit">Search</button>
                   <input class="form-control" type="search" placeholder="Search" name="query" aria-label="Search">
-                  <button class="btn btn-main" type="submit">Search</button>
                 </form>
+                <a class="nav-link shopping-bag-pos" href="#"><i class="fas fa-shopping-bag fa-lg icon"></i></a>
               </div> 
           </nav>
           {% include 'includes/category-nav.html' %}

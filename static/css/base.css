@@ -18,6 +18,10 @@ body {
     color: pink;
 }
 
+.shopping-bag-pos {
+    padding: 0 20px 0 20px;
+}
+
 .center-form {
     text-align: center;
     margin-top: 20px;
@@ -35,3 +39,11 @@ body {
     height: 300px;
 }
 
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'home',
     'allauth.socialaccount.providers.google',
     'products',
+    'bag',
 
 ]
 
