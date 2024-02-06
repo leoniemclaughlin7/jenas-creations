@@ -25,7 +25,7 @@
     {% endblock %}
 
     {% block corejs %}
-        <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/23ee961b74.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -85,7 +85,7 @@
                   <button class="btn btn-main mr-2" type="submit">Search</button>
                   <input class="form-control" type="search" placeholder="Search" name="query" aria-label="Search">
                 </form>
-                <a class="nav-link shopping-bag-pos" href="#"><i class="fas fa-shopping-bag fa-lg icon"></i></a>
+                <a class="nav-link shopping-bag-pos" href="{% url 'view_bag' %}"><i class="fa-solid fa-cart-shopping"></i></a>
               </div> 
           </nav>
           {% include 'includes/category-nav.html' %}
