@@ -40,7 +40,7 @@
                                     <p>&euro;{{ item.product.price }}</p>
                                 </td>
                                 <td>
-                                    <form class="form" action="#" method="POST">
+                                    <form class="form" action="{% url 'update_bag' item.product_id %}" method="POST">
                                         {% csrf_token %}
                                             <div class="col-12">
                                                 <div class="form-group w-100">
@@ -63,7 +63,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a class="update-link text-info" href="#"><small>Update</small></a>
+                                            <button class="btn btn-main btn-sm rounded-0 mt-2">
+                                                <span>Update</span>
+                                            </button>
                                             <a class="remove-item text-danger float-right" href="#"><small>Remove</small></a>
                                     </form>        
                                 </td> 
