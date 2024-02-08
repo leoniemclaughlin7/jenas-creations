@@ -6,38 +6,45 @@ setTimeout(function () {
     alert.close();
 }, 3000);
 
-// increment and decrement quantity and prevent inputs of less than 1 and greater than 50
-let quantity = $('#quantity').val();
-if (quantity = 1){
-   $('#decrement').prop('disabled', true);
-} 
-$('#decrement').on('click', function(e) {
+var allQtyInputs = $('.quantity');
+for(var i = 0; i < allQtyInputs.length; i++){
+    var productId = $(allQtyInputs[i]).data('product_id');
+    handleEnableDisable(productId);
+}
+
+
+$('.decrement').on('click', function(e) {
    e.preventDefault();
-   let currentValueNow = $('#quantity').val(); 
-   currentValueNow--;
-   $('#quantity').val(currentValueNow);
-      if (currentValueNow <= 1) {
-        $('#decrement').prop('disabled', true);
-      } else if (currentValueNow >= 50) {
-         $('#increment').prop('disabled', false);
-      }else {
-         $('#increment').prop('disabled', false);
-      }
+   var closestInput = $(this).closest('.input-group').find('.quantity')[0];
+   var currentValueNow = parseInt($(closestInput).val()); 
+   $(closestInput).val(currentValueNow - 1);
+   var productId = $(this).data('product_id');
+   handleEnableDisable(productId);
+});
+
+ $('.increment').on('click', function(e) {
+   e.preventDefault();
+   var closestInput = $(this).closest('.input-group').find('.quantity')[0];
+   var currentValueNow = parseInt($(closestInput).val());
+   $(closestInput).val(currentValueNow + 1);
+   var productId = $(this).data('product_id');
+   handleEnableDisable(productId);
  });
 
- $('#increment').on('click', function(e) {
-   e.preventDefault();
-   let currentValueNow = $('#quantity').val();
-   currentValueNow++;
-   $('#quantity').val(currentValueNow);
-   $('#quantity').val(currentValueNow);
-   if (currentValueNow > 49) {
-     $('#increment').prop('disabled', true);
-   } else if (currentValueNow >= 1) {
-      $('#decrement').prop('disabled', false);
-   }else {
-      $('#increment').prop('disabled', false);
-   }
- });
+ // Disable +/- buttons outside 1-50 range
+ function handleEnableDisable(productId) {
+   var currentValue = parseInt($(`#quantity_${productId}`).val());
+   var minusDisabled = currentValue < 2;
+   var plusDisabled = currentValue > 49;
+   $(`#decrement_${productId}`).prop('disabled', minusDisabled);
+   $(`#increment_${productId}`).prop('disabled', plusDisabled);
+
+ }
+
+ $('.quantity').change(function() {
+   var productId = $(this).data('product_id');
+   handleEnableDisable(productId);
+});  
+
 
 });

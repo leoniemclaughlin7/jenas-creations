@@ -85,7 +85,17 @@
                   <button class="btn btn-main mr-2" type="submit">Search</button>
                   <input class="form-control" type="search" placeholder="Search" name="query" aria-label="Search">
                 </form>
-                <a class="nav-link shopping-bag-pos" href="{% url 'view_bag' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="text-center">
+                <a class="nav-link shopping-bag-pos" href="{% url 'view_bag' %}"><i class="fa-solid fa-cart-shopping"></i>
+                <p class="my-0">
+                  {% if grand_total %}
+                      &euro;{{ grand_total|floatformat:2 }}
+                  {% else %}
+                      &euro;0.00
+                  {% endif %}
+              </p>
+              </a>
+            </div>
               </div> 
           </nav>
           {% include 'includes/category-nav.html' %}

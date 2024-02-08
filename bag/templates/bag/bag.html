@@ -5,5 +5,99 @@
 {% endblock %}
 
 {% block content %}
-    
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2>Shopping Bag</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+                    <table class="table table-borderless" id="bag-table">
+                        <thead>
+                            <tr>
+                                <th>Product:</th>
+                                <th>Name:</th>
+                                <th>Price:</th>
+                                <th>Quantity:</th>
+                                <th>Subtotal:</th>
+                            </tr>
+                        </thead>
+
+                        {% for item in bag_items %}
+                            <tr>
+                                <td class="w-25">
+                                    <img class="card-imaged-sized rounded" src="{{ item.product.image_url }}">
+                                </td>
+                                <td>
+                                    <p><strong>{{ item.product.name }}</strong></p>
+                                </td>
+                                <td>
+                                    <p>&euro;{{ item.product.price }}</p>
+                                </td>
+                                <td>
+                                    <form class="form" action="#" method="POST">
+                                        {% csrf_token %}
+                                            <div class="col-12">
+                                                <div class="form-group w-100">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-main rounded-0 decrement" id="decrement_{{item.product.id}}" data-product_id="{{ item.product.id }}">
+                                                                <span class="icon">
+                                                                    <i class="fa-sharp fa-solid fa-less-than"></i>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                        <input class="form-control quantity" type="number" name="quantity" value="{{item.quantity}}" min="1" max="50" id="quantity_{{item.product.id}}" data-product_id="{{ item.product.id }}">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-main rounded-0 increment" id="increment_{{item.product.id}}" data-product_id="{{ item.product.id }}">
+                                                                <span class="icon">
+                                                                    <i class="fa-sharp fa-solid fa-greater-than"></i>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="update-link text-info" href="#"><small>Update</small></a>
+                                            <a class="remove-item text-danger float-right" href="#"><small>Remove</small></a>
+                                    </form>        
+                                </td> 
+                                <td>
+                                    <p>&euro;{{ item.individual_total }}</p>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    <h4><strong>Grand Total: &euro;{{ grand_total|floatformat:2 }}</strong></h4>
+                    <div class="d-flex">
+                        <a href="{% url 'products' %}" class="btn btn-secondary rounded-0 btn-lg">
+                            <span class="icon">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </span>
+                            <span>Keep Shopping</span>
+                        </a>
+                        <a href="" class="btn btn-main rounded-0 btn-lg">
+                            <span class="text-uppercase">Secure Checkout</span>
+                            <span class="icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                        </a>
+                    </div>
+            {% else %}
+                <p>Your bag is empty.</p>
+                <a href="{% url 'products' %}" class="btn btn-main rounded-0 btn-lg">
+                    <span class="icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </span>
+                    <span>Keep Shopping</span>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}
