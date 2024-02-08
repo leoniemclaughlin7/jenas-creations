@@ -63,11 +63,17 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="d-flex justify-content-between">
                                             <button class="btn btn-main btn-sm rounded-0 mt-2">
-                                                <span>Update</span>
+                                            Update
                                             </button>
-                                            <a class="remove-item text-danger float-right" href="#"><small>Remove</small></a>
-                                    </form>        
+                                    </form>
+                                    <a href="{% url 'remove_from_bag' item.product.id %}">
+                                        <button class="btn btn-danger btn-sm rounded-0 mt-2">
+                                        Remove
+                                        </button>
+                                    </a>
+                                </div>      
                                 </td> 
                                 <td>
                                     <p>&euro;{{ item.individual_total }}</p>
@@ -75,16 +81,18 @@
                             </tr>
                             {% endfor %}
                         </table>
+                        <div class="d-flex justify-content-end">
                     <h4><strong>Grand Total: &euro;{{ grand_total|floatformat:2 }}</strong></h4>
-                    <div class="d-flex">
+                    </div>
+                    <div class="d-flex justify-content-end">
                         <a href="{% url 'products' %}" class="btn btn-secondary rounded-0 btn-lg">
                             <span class="icon">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </span>
                             <span>Keep Shopping</span>
                         </a>
-                        <a href="" class="btn btn-main rounded-0 btn-lg">
-                            <span class="text-uppercase">Secure Checkout</span>
+                        <a href="" class="btn btn-main rounded-0 btn-lg checkout-pos">
+                            <span>Secure Checkout</span>
                             <span class="icon">
                                 <i class="fa-solid fa-lock"></i>
                             </span>
