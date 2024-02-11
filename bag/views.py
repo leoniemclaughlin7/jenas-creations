@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse
 
 def view_bag(request):
     """
@@ -37,6 +37,7 @@ def update_bag(request, product_id):
 
 def remove_from_bag(request, product_id):
     bag = request.session.get('bag', {})
+    print(product_id)
     bag.pop(product_id)
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))

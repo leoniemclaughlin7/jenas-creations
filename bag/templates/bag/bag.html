@@ -63,17 +63,17 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="d-flex justify-content-between">
                                             <button class="btn btn-main btn-sm rounded-0 mt-2">
                                             Update
                                             </button>
-                                    </form>
+                                        </form> 
+                                        <div class="d-flex justify-content-end remove-pos">
                                     <a href="{% url 'remove_from_bag' item.product.id %}">
-                                        <button class="btn btn-danger btn-sm rounded-0 mt-2">
+                                        <button class="btn btn-danger btn-sm rounded-0">
                                         Remove
                                         </button>
-                                    </a>
-                                </div>      
+                                    </a> 
+                                </div>   
                                 </td> 
                                 <td>
                                     <p>&euro;{{ item.individual_total }}</p>
