@@ -76,4 +76,7 @@ body {
     margin-top: -29px;
 }
 
+.row {
+    margin-right: 0 !important;
+}
  
