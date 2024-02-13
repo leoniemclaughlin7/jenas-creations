@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2>Thank You</h2>
+                <hr>
+                <p>Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                <p>Your order number is: <strong>{{ order.order_number }}</strong>.</p>
+                <p>Date: <strong>{{ order.date }}</strong>.</p>
+            </div>
+        </div>
+    
+    
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <p>Order Summary ({{ product_count }})</p>
+            <div class="row">
+                <div class="col-9">
+                    <p>Order</p>
+                </div>
+                <div class="col-3 d-flex justify-content-center">
+                    <p>Subtotal</p>
+                </div>
+            </div>
+            {% for item in order.lineitems.all %}
+                <div class="row">
+                    <div class="col-2">
+                        <a href="{% url 'product_detail' item.product.id %}">
+                                <img class="w-100" src="{{ item.product.image_url }}" alt="{{ product.name }}">
+                        </a>
+                    </div>
+                    <div class="col-7">
+                        <p><strong>{{ item.product.name }}</strong></p>
+                        <p>Qty: {{ item.quantity }}</p>
+                    </div>
+                    <div class="col-3 d-flex justify-content-center">
+                        <p>&euro;{{ item.lineitem_total }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            <hr>
+            <div class="d-flex justify-content-between">
+                <div class="col-7">
+                    <p>Grand Total:</p>
+                </div>
+                <div class="col-3 d-flex justify-content-center grand-total-pos">
+                    <p><strong>&euro;{{ order.grand_total | floatformat:2 }}</strong></p>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+                <strong>Delievery info:</strong>
+                <table class="table table-sm">
+                    <tbody>
+                      <tr>
+                        <th>Full Name</th>
+                        <td>{{ order.full_name }}</td>
+                      </tr>
+                      <tr>
+                        <th>Address 1</th>
+                        <td>{{ order.street_address1 }}</td>
+                      </tr>
+                      {% if order.street_address2 %}
+                      <tr>
+                        <th>Address 2</th>
+                        <td>{{ order.street_address2 }}</td>
+                      </tr>
+                      {% endif %}
+                      <tr>
+                        <th>Town or City</th>
+                        <td>{{ order.town_or_city }}</td>
+                      </tr>
+                      {% if order.county %}
+                      <tr>
+                        <th>County</th>
+                        <td>{{ order.county }}</td>
+                      </tr>
+                      {% endif %}
+                      <tr>
+                        <th>Country</th>
+                        <td>{{ order.country }}</td>
+                      </tr>
+                      {% if order.postcode %}
+                      <tr>
+                        <th>Postal Code</th>
+                        <td>{{ order.postcode }}</td>
+                      </tr>
+                      {% endif %}
+                      <tr>
+                        <th>Phone number</th>
+                        <td>{{ order.phone_number }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+    </div>     
+{% endblock %}
