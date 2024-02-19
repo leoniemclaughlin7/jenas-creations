@@ -5,127 +5,131 @@
 
 <head>
 
-    {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock %}
 
-    {% block extra_meta %}
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block corecss %}
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="{% static 'js/script.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
+  {% block corecss %}
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="{% static 'js/script.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-    {% block corejs %}
-        <script src="https://kit.fontawesome.com/23ee961b74.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <!-- Stripe -->
-        <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
+  {% block corejs %}
+  <script src="https://kit.fontawesome.com/23ee961b74.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
+  {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+  {% block extra_js %}
+  {% endblock %}
 
-    <title>Jenas Creations {% block extra_title %}{% endblock %}</title>
+  <title>Jenas Creations {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
-              <a class="navbar-brand" href="{% url 'home' %}">Jenas Creations</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'products' %}">All Products</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Filter By
-                    </a>
-                    <ul class="dropdown-menu">
-                        <a href="{% url 'products' %}?sort=price" class="dropdown-item">Price (low to high)</a>
-                        <a href="{% url 'products' %}?sort=-price" class="dropdown-item">Price (High to low)</a>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      My Account
-                    </a>
-                    <ul class="dropdown-menu">
-                        {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                        <a href="#" class="dropdown-item">Product Management</a>
-                        {% endif %}
-                        <a href="#" class="dropdown-item">My Profile</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                        {% else %}
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                        {% endif %}
-                    </ul>
-                  </li>
-                </ul>
-                <form method="GET" action="{% url 'products' %}" class="d-flex">
-                  <button class="btn btn-main mr-2" type="submit">Search</button>
-                  <input class="form-control" type="search" placeholder="Search" name="query" aria-label="Search">
-                </form>
-                <div class="text-center">
-                <a class="nav-link shopping-bag-pos" href="{% url 'view_bag' %}"><i class="fa-solid fa-cart-shopping"></i>
-                <p class="my-0">
-                  {% if grand_total %}
-                      &euro;{{ grand_total|floatformat:2 }}
-                  {% else %}
-                      &euro;0.00
-                  {% endif %}
-              </p>
-              </a>
-            </div>
-              </div> 
-          </nav>
-          {% include 'includes/category-nav.html' %}
-    </header>
-
-    <!-- Container for rendering messages taken from I Think Therefore I Blog walkthrough -->
-    <div class="container">
-      <div class="row">
-          <div class="col-md-8 offset-md-2">
-              {% for message in messages %}
-              <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                  {{ message | safe }}
-                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-              {% endfor %}
-          </div>
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">Jenas Creations</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'products' %}">All Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Filter By
+            </a>
+            <ul class="dropdown-menu">
+              <a href="{% url 'products' %}?sort=price" class="dropdown-item">Price (low to high)</a>
+              <a href="{% url 'products' %}?sort=-price" class="dropdown-item">Price (High to low)</a>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              My Account
+            </a>
+            <ul class="dropdown-menu">
+              {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+              <a href="#" class="dropdown-item">Product Management</a>
+              {% endif %}
+              <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% endif %}
+            </ul>
+          </li>
+        </ul>
+        <form method="GET" action="{% url 'products' %}" class="d-flex">
+          <button class="btn btn-main mr-2" type="submit">Search</button>
+          <input class="form-control" type="search" placeholder="Search" name="query" aria-label="Search">
+        </form>
+        <div class="text-center">
+          <a class="nav-link shopping-bag-pos" href="{% url 'view_bag' %}"><i class="fa-solid fa-cart-shopping"></i>
+            <p class="my-0">
+              {% if grand_total %}
+              &euro;{{ grand_total|floatformat:2 }}
+              {% else %}
+              &euro;0.00
+              {% endif %}
+            </p>
+          </a>
+        </div>
       </div>
+    </nav>
+    {% include 'includes/category-nav.html' %}
+  </header>
+
+  <!-- Container for rendering messages taken from I Think Therefore I Blog walkthrough -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+          {{ message | safe }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 
-    {% block page_header %}
-    {% endblock %}
+  {% block page_header %}
+  {% endblock %}
 
-    <main>
+  <main>
     {% block content %}
     {% endblock %}
-    </main>
+  </main>
 
-    {% block postloadjs %}
+  {% block postloadjs %}
 
-    {% endblock %}
+  {% endblock %}
 
 
 </body>
