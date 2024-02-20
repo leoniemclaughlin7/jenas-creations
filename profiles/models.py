@@ -5,7 +5,7 @@ from django.dispatch import receiver
 from django_countries.fields import CountryField
 
 
-class User(models.Model):
+class UserProfile(models.Model):
     """
     A user profile for saving
     delivery information
@@ -22,12 +22,12 @@ class User(models.Model):
     def __str__(self):
         return self.user.username
 
-
+ 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     Create or update the user profile
     """
     if created:
-        User.objects.create(user=instance)
+        UserProfile.objects.create(user=instance)
     instance.userprofile.save()
