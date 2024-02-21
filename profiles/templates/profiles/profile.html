@@ -21,6 +21,48 @@
                 <button class="btn btn-lg btn-main mt-3">Update Information</button>
             </form>
         </div>
+        <div class="col-12 col-lg-6">
+            <div class="container order-history">
+                <p>Order History</p>
+                {% for order in orders %}
+                <div class="row">
+                    <div class="col-3">
+                        <p>Date:</p>
+                    </div>
+                    <div class="col-3">
+                        <p>Grand Total:</p>
+                    </div>
+                    <div class="col-3">
+                        <p>Order Number:</p>
+                    </div>
+                    <div class="col-3">
+                        <p>Items:</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-3">
+                            <p><strong>{{ order.date }}</strong></p>
+                        </div>
+                        <div class="col-3">
+                            <p><strong>&euro;{{ order.grand_total | floatformat:2 }}</strong></p>
+                        </div>
+                        <div class="col-3">
+                            <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                                {{ order.order_number|truncatechars:8 }}
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            {% for item in order.lineitems.all %}
+                            <p><strong>{{ item.product.name }} x
+                                    {{ item.quantity }}</strong></p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

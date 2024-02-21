@@ -1,5 +1,6 @@
 # Credits 
-Connecting social accounts: https://www.marinamele.com/user-authentication-with-google-using-django-allauth 
+Connecting social accounts: https://www.marinamele.com/user-authentication-with-google-using-django-allauth
+Django order_by: https://stackoverflow.com/questions/9834038/django-order-by-query-set-ascending-and-descending  
 
 # Images
 
