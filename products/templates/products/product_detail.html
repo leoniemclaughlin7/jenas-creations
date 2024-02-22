@@ -5,66 +5,81 @@
 {% endblock %}
 
 {% block content %}
-    <section class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div>
-                    <a href="{{ product.image_url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
-                    </a>
-                </div>
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div>
+                <a href="{{ product.image_url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+                </a>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div>
-                    <h2><strong>{{ product.name }}</strong></h2>
-                    <p>{{ product.description }}</p>
-                    <hr>
-                    <p><strong>&euro;{{ product.price }}</strong></p>
-                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
-                        {% csrf_token %}
-                        <div>
-                            <div class="col-12">
-                                <p><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="btn btn-main rounded-0 decrement" id="decrement_{{product.id}}" data-product_id="{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fa-sharp fa-solid fa-less-than"></i>
-                                                </span>   
-                                            </button>
-                                        </div>
-                                        <input class="form-control quantity" type="number" name="quantity" value="1" min="1" max="50" id="quantity_{{product.id}}" data-product_id="{{ product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-main rounded-0 increment" id="increment_{{product.id}}" data-product_id="{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fa-sharp fa-solid fa-greater-than"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <div class="col-12 d-flex">
-                                        <a href="{% url 'products' %}" class="btn btn-lg btn-secondary rounded-0 mt-5">
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div>
+                <h2><strong>{{ product.name }}</strong></h2>
+                <p>{{ product.description }}</p>
+                <hr>
+                <p><strong>&euro;{{ product.price }}</strong></p>
+                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div>
+                        <div class="col-12">
+                            <p><strong>Quantity:</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-main rounded-0 decrement" id="decrement_{{product.id}}"
+                                            data-product_id="{{ product.id }}">
                                             <span class="icon">
-                                                <i class="fa-solid fa-cart-shopping"></i>
-                                            </span>
-                                            <span>Keep Shopping</span>
-                                        </a>
-                                        <button class="btn btn-main btn-lg rounded-0 add-to-bag mt-5">
-                                            <span>Add to Bag</span>
-                                            <span class="icon">
-                                                <i class="fa-solid fa-bag-shopping"></i>
+                                                <i class="fa-sharp fa-solid fa-less-than"></i>
                                             </span>
                                         </button>
                                     </div>
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <input class="form-control quantity" type="number" name="quantity" value="1" min="1"
+                                        max="50" id="quantity_{{product.id}}" data-product_id="{{ product.id }}">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-main rounded-0 increment" id="increment_{{product.id}}"
+                                            data-product_id="{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fa-sharp fa-solid fa-greater-than"></i>
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-12 d-flex">
+                                <a href="{% url 'products' %}" class="btn btn-lg btn-secondary rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </span>
+                                    <span>Keep Shopping</span>
+                                </a>
+                                <button class="btn btn-main btn-lg rounded-0 add-to-bag mt-5">
+                                    <span>Add to Bag</span>
+                                    <span class="icon">
+                                        <i class="fa-solid fa-bag-shopping"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                    </form>    
-                </div>
+                    </div>
             </div>
+            </form>
         </div>
+    </div>
+    <section>
+        {% if user.is_authenticated %}
+        <!-- If User is logged in show review form -->
+        <div class="col-lg-4 submit-review col-md-12">
+            <h3>Leave a Review:</h3>
+            <form method="post" action="{% url 'review' %}">
+                {{ review_form | crispy }} {% csrf_token %}
+                <button type="submit" class="btn btn-lg submit-button" aria-label="Submits review">Submit</button>
+            </form>
+        </div>
+        {% endif %}
     </section>
+    </div>
+</section>
 {% endblock %}
