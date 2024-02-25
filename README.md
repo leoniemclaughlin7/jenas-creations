@@ -4,6 +4,9 @@ Django order_by: https://stackoverflow.com/questions/9834038/django-order-by-que
 Django filter: https://www.w3schools.com/django/django_queryset_filter.php 
 overflow-wrap: https://www.w3schools.com/cssref/css3_pr_overflow-wrap.php
 Convert object: https://www.geeksforgeeks.org/convert-object-to-string-in-python/ 
+positive integer field: https://www.geeksforgeeks.org/positiveintegerfield-django-models/
+Clean method on django models: https://docs.djangoproject.com/en/5.0/ref/forms/validation/ 
+
 
 
 
