@@ -6,7 +6,7 @@ from django.contrib import messages
 
 @login_required
 def edit_review(request, review_id):
-    """ Edit a product in the store """
+    """ Edit a review """
     review = get_object_or_404(Review, pk=review_id)
     if str(request.user) != review.name:
         messages.error(request, 'Request denied! You do not have authorisation to edit this review.')
@@ -29,3 +29,15 @@ def edit_review(request, review_id):
     }
 
     return render(request, 'review/edit_review.html', context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete a review """
+    review = get_object_or_404(Review, pk=review_id)
+    if str(request.user) != review.name:
+        messages.error(request, 'Request denied! You do not have authorisation to delete this review.')
+        return redirect(reverse('home'))
+    review.delete()
+    messages.success(request, 'Review deleted!')
+    return redirect('product_detail', product_id=review.product.id)

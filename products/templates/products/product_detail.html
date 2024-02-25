@@ -108,7 +108,10 @@
                         </p>
                         {{ review.body | linebreaks }}
                         {% if user.is_authenticated and user.username == review.name %}
-                        <a href="{% url 'edit_review' review.id %}">Edit</a>
+                        <small>
+                            <a href="{% url 'edit_review' review.id %}">Edit</a> |
+                            <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+                        </small>
                         {% endif %}
                     </div>
                     {% endfor %}
