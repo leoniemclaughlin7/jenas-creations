@@ -3,6 +3,8 @@ Connecting social accounts: https://www.marinamele.com/user-authentication-with-
 Django order_by: https://stackoverflow.com/questions/9834038/django-order-by-query-set-ascending-and-descending 
 Django filter: https://www.w3schools.com/django/django_queryset_filter.php 
 overflow-wrap: https://www.w3schools.com/cssref/css3_pr_overflow-wrap.php
+Convert object: https://www.geeksforgeeks.org/convert-object-to-string-in-python/ 
+
 
 
 # Images

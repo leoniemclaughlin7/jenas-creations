@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section>
+    <div class="conatiner">
+        <div class="row">
+            <div>
+                <hr>
+                <h2>Edit Review:</h2>
+                <hr>
+            </div>
+            <div class="col-12 col-lg-6 d-flex justify-content-center">
+                <form method="post" action="{% url 'edit_review' review.id %}">
+                    {{ form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-lg submit-button" aria-label="Submits review">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
