@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <hr>
+            <h2>Create your own product!</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'custom_order' %}">
+                {% csrf_token %}
+                {{ custom_form | crispy }}
+                <div class="d-flex justify-content-between mt-3">
+                    <a class="btn btn-lg btn-secondary" href="{% url 'products' %}">All products</a>
+                    <button class="btn btn-lg btn-main" type="submit">Place custom order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

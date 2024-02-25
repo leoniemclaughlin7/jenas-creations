@@ -1,11 +1,13 @@
 from django.db import models
 from products.models import Category
 
+
 MATERIALS = ((0, 'Polymer Clay'), (1, 'Gemstones and Crystals'), (2, 'Wire'), (3, 'Beads'))
+
 
 class CustomOrder(models.Model):
     category = models.ForeignKey(Category, null=False, blank=False, on_delete=models.CASCADE)
-    material = models.PositiveIntegerField(choices=MATERIALS)
+    material = models.IntegerField(choices=MATERIALS, blank=False)
     colour_scheme = models.CharField(max_length=80, blank=False)
     charm = models.BooleanField(default=False, blank=False)
     personalised =  models.BooleanField(default=False, blank=False)
@@ -31,7 +33,7 @@ class CustomOrder(models.Model):
         2: 10.00,
         3: 8.00,
         }
-        
+
         material_price = self.MATERIAL_PRICES.get(self.material, 0)
 
         if self.charm:
