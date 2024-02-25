@@ -8,7 +8,7 @@ class Review(models.Model):
     came from:
     https://www.geeksforgeeks.org/positiveintegerfield-django-models/
     """
-    product = models.ForeignKey(Product, null=True, blank=True, on_delete=models.SET_NULL)
+    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     name = models.CharField(max_length=80)
     stars = models.PositiveIntegerField(choices=(
         (1, '1 star'), (2, '2 stars'), (3, '3 stars'), (4, '4 stars'),

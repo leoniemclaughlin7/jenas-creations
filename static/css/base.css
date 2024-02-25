@@ -155,3 +155,14 @@ select option[value=""] {
     height: 600px;
     overflow: scroll;
 }
+
+/* reviews */
+
+.reviews {
+    margin-top: 10px;
+    height: 400px;
+    overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}

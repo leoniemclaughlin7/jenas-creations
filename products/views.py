@@ -50,13 +50,15 @@ def product_detail(request, product_id):
     """ A view to display product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.order_by('-created_on').all()
+    reviews = Review.objects.order_by('-created_on').filter(product_id=product_id)
     if request.method == 'POST':
         review_form = ReviewForm(request.POST)
 
         if review_form.is_valid():
-            review_form.instance.name = request.user.username
-            review_form.save()
+            review = review_form.save(commit=False)
+            review.product_id = product_id
+            review.name = request.user.username
+            review.save()
             review_form = ReviewForm()
             messages.add_message(request, messages.SUCCESS,
                                  'Your review has been successfully posted!')
