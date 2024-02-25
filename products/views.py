@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .forms import ProductForm
+from review.models import Review
+from review.forms import ReviewForm
 
 def all_products(request):
     """ A view to show all products """
@@ -48,9 +50,23 @@ def product_detail(request, product_id):
     """ A view to display product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.order_by('-created_on').all()
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST)
+
+        if review_form.is_valid():
+            review_form.instance.name = request.user.username
+            review_form.save()
+            review_form = ReviewForm()
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your review has been successfully posted!')
+    else:
+        review_form = ReviewForm()
 
     context = {
         'product': product,
+        'review_form': review_form,
+        'reviews': reviews 
     }
 
     return render(request, 'products/product_detail.html', context)

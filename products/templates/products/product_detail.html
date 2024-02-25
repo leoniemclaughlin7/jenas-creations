@@ -74,18 +74,36 @@
             </form>
         </div>
     </div>
-    <section>
-        {% if user.is_authenticated %}
-        <!-- If User is logged in show review form -->
-        <div class="col-lg-4 submit-review col-md-12">
-            <h3>Leave a Review:</h3>
-            <form method="post" action="{% url 'review' %}">
-                {{ review_form | crispy }} {% csrf_token %}
-                <button type="submit" class="btn btn-lg submit-button" aria-label="Submits review">Submit</button>
-            </form>
+</section>
+<section>
+    {% if user.is_authenticated %}
+    <!-- If User is logged in show review form -->
+    <div class="col-lg-4 submit-review col-md-12">
+        <h3>Leave a Review:</h3>
+        <form method="post" action="{% url 'product_detail' product.id %}">
+            {{ review_form.as_p }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-lg submit-button" aria-label="Submits review">Submit</button>
+        </form>
+    </div>
+    {% endif %}
+    <div class="col-lg-4 reviews col-md-12">
+        <h3>Reviews:</h3>
+        <div class="card-body">
+            {% for review in reviews %}
+            <div>
+                <p>
+                    <strong>{{ review.name }}</strong>
+                    <span>
+                        {{ review.created_on }}
+                    </span>
+                    <span>{{review.stars}}<i class="fas fa-star" style="color: #f9e406;"></i></span>
+                </p>
+                {{ review.body | linebreaks }}
+            </div>
+            {% endfor %}
         </div>
-        {% endif %}
-    </section>
     </div>
 </section>
+
 {% endblock %}

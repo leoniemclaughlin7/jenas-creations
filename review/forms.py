@@ -1,7 +1,7 @@
 from django import forms
 from .models import Review
 
-class Review(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
     """
     Review form set up
     """
