@@ -7,6 +7,7 @@ Convert object: https://www.geeksforgeeks.org/convert-object-to-string-in-python
 positive integer field: https://www.geeksforgeeks.org/positiveintegerfield-django-models/
 Clean method on django models: https://docs.djangoproject.com/en/5.0/ref/forms/validation/ 
 Save method django: https://docs.djangoproject.com/en/5.0/topics/db/models/
+Retrieving a single object with get(): https://docs.djangoproject.com/en/5.0/topics/db/queries/
 
 
 

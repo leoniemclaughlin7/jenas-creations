@@ -3,7 +3,6 @@ from .models import CustomOrder
 from products.models import Category
 
 
-
 class CustomOrderForm(forms.ModelForm):
 
     class Meta:

@@ -1,11 +1,13 @@
 from django.db import models
 from products.models import Category
+from profiles.models import UserProfile
 
 
 MATERIALS = ((0, 'Polymer Clay'), (1, 'Gemstones and Crystals'), (2, 'Wire'), (3, 'Beads'))
 
-
 class CustomOrder(models.Model):
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE,
+                                     null=False, blank=False)
     category = models.ForeignKey(Category, null=False, blank=False, on_delete=models.CASCADE)
     material = models.IntegerField(choices=MATERIALS, blank=False)
     colour_scheme = models.CharField(max_length=80, blank=False)
@@ -17,8 +19,16 @@ class CustomOrder(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
 
+    MATERIAL_PRICES = {
+        0: 8.00,
+        1: 14.00,
+        2: 10.00,
+        3: 8.00,
+        }
+
+
     def clean(self):
-        super.clean()
+        super().clean()
         if self.personalised and not self.name:
             raise ValidationError({'A name is required for personalised items.'})
 
@@ -27,12 +37,6 @@ class CustomOrder(models.Model):
         """
         Override the original save method to set the price.
         """
-        MATERIAL_PRICE = {
-        0: 8.00,
-        1: 14.00,
-        2: 10.00,
-        3: 8.00,
-        }
 
         material_price = self.MATERIAL_PRICES.get(self.material, 0)
 
