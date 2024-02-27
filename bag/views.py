@@ -24,16 +24,19 @@ def add_to_bag(request, product_id):
 
 
 def update_bag(request, product_id):
-    quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
+    quantity = int(request.POST.get('quantity'))
+    if product_id == str(1000):
+        if 'custom_order' in bag:
+            custom_order_id = bag['custom_order']
+            return redirect(reverse('custom_order_update', args=[custom_order_id, quantity]))
+            
     if quantity > 0:
         bag[product_id] = quantity
     else:
-        bag.pop(product_id)
-
+        bag.pop(product_id, None)
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
-
 
 def remove_from_bag(request, product_id):
     bag = request.session.get('bag', {})

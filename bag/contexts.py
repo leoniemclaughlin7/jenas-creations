@@ -16,22 +16,23 @@ def bag_contents(request):
     if 'custom_order' in bag:
         custom_order_id = bag['custom_order'] 
         custom_order = CustomOrder.objects.get(pk=custom_order_id)
-        total += custom_order.price
+        total += bag[str(custom_order_id)] * custom_order.price
         bag_items.append({
             'product_id': custom_order.product_id,
             'custom_order_id': custom_order_id,
             'category': custom_order.category,
             'material': custom_order.material,
-            'individual_total': custom_order.price,
-            'quantity': 1,
+            'individual_total': bag[str(custom_order_id)] * custom_order.price,
+            'quantity': bag[str(custom_order_id)],
             'product_name': custom_order.product_name,
-            'price': custom_order.price
+            'price': custom_order.price,
         })
     product_count += 1
 
     for product_id, quantity in bag.items():
-        if product_id == 'custom_order': 
+        if product_id == 'custom_order' or product_id == str(1000) or product_id == str(custom_order_id): 
             continue
+        print(product_id)
         product = Product.objects.get(pk=product_id)
         if isinstance(quantity, int) and isinstance(product.price, Decimal):
             total += quantity * product.price
