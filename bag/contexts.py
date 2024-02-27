@@ -11,37 +11,46 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    for product_id, quantity in bag.items():
-        product = get_object_or_404(Product, pk=product_id)
-        total += quantity * product.price
-        individual_total = quantity * product.price
-        product_count += quantity
+    print(bag)
+     
+    if 'custom_order' in bag:
+        custom_order_id = bag['custom_order'] 
+        custom_order = CustomOrder.objects.get(pk=custom_order_id)
+        total += custom_order.price
         bag_items.append({
+            'product_id': custom_order.product_id,
+            'custom_order_id': custom_order_id,
+            'category': custom_order.category,
+            'material': custom_order.material,
+            'individual_total': custom_order.price,
+            'quantity': 1,
+            'product_name': custom_order.product_name,
+            'price': custom_order.price
+        })
+    product_count += 1
+
+    for product_id, quantity in bag.items():
+        if product_id == 'custom_order': 
+            continue
+        product = Product.objects.get(pk=product_id)
+        if isinstance(quantity, int) and isinstance(product.price, Decimal):
+            total += quantity * product.price
+            individual_total = quantity * product.price
+            product_count += quantity
+            bag_items.append({
             'product_id': product_id,
             'quantity': quantity,
             'product': product,
             'individual_total': individual_total,
         })
-
-    if 1000 in bag.items():
-        custom_order_id = bag[1000]
-        custom_order = get_object_or_404(CustomOrder, pk=custom_order_id)
-        total += custom_order.price
-        bag_items.append({
-            'product_id': 1000,
-            'quantity': 1,
-            'product': custom_order,
-            'individual_total': custom_order.price,
-        })
-        product_count += 1
     
     grand_total = total
     
 
     context = {
         'bag_items': bag_items,
-        'product_count': product_count,
         'grand_total': grand_total,
+        'product_count': product_count
     }
 
     return context

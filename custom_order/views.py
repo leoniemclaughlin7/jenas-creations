@@ -31,7 +31,18 @@ def custom_order_details(request):
     custom_order = get_object_or_404(CustomOrder, user_profile=user_profile)
     price = custom_order.price
     context = {
-        'price': price, 
+        'price': price,
+        'custom_order': custom_order,
     }
 
     return render(request, 'custom_order/custom_order_price.html', context)
+
+def add_custom_order_to_bag(request, custom_order_id):
+    """ Add a quantity of the specified product to the shopping bag """
+    custom_order = CustomOrder.objects.get(pk=custom_order_id)
+    bag = request.session.get('bag', {})
+
+    bag['custom_order'] = custom_order_id
+   
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))

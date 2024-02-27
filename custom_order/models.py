@@ -10,6 +10,8 @@ class CustomOrder(models.Model):
                                      null=False, blank=False)
     category = models.ForeignKey(Category, null=False, blank=False, on_delete=models.CASCADE)
     material = models.IntegerField(choices=MATERIALS, blank=False)
+    product_id = models.IntegerField(blank=False, default=1000)
+    product_name = models.CharField(max_length=80, blank=False, default='Your Custom Order')
     colour_scheme = models.CharField(max_length=80, blank=False)
     charm = models.BooleanField(default=False, blank=False)
     personalised =  models.BooleanField(default=False, blank=False)
