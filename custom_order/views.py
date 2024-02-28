@@ -51,9 +51,14 @@ def custom_order_update(request, custom_order_id, quantity):
     bag = request.session.get('bag', {})
     if 'custom_order' in bag:
         if int(quantity) > 0:
-            bag[custom_order_id] = bag.get(custom_order_id, 0) + quantity
-        else:
-            bag.pop(custom_order_id)
+            bag['quantity'] = quantity
+        
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
 
+
+def custom_order_delete(request, custom_order_id):
+    bag = request.session.get('bag', {})
+    bag.pop(custom_order_id)
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))

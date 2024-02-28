@@ -40,6 +40,12 @@ def update_bag(request, product_id):
 
 def remove_from_bag(request, product_id):
     bag = request.session.get('bag', {})
+
+    if product_id == str(1000):
+        if 'custom_order' in bag:
+            custom_order_id = bag['custom_order']
+            return redirect(reverse('custom_order_delete', args=[custom_order_id]))
+
     bag.pop(product_id)
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
