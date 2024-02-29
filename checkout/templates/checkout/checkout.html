@@ -26,12 +26,11 @@
             {% for item in bag_items %}
             <div class="row">
                 <div class="col-2">
-                    <a href="{% url 'product_detail' item.product.id %}">
-                        <img class="w-100" src="{{ item.product.image_url }}" alt="{{ product.name }}">
-                    </a>
+                    <img class="w-100" src="{{ item.product.image_url }}" alt="{{ product.name }}">
+                    {{ item.category}}
                 </div>
                 <div class="col-7">
-                    <p><strong>{{ item.product.name }}</strong></p>
+                    <p><strong>{{ item.product.name }}{{ item.product_name }}</strong></p>
                     <p>Qty: {{ item.quantity }}</p>
                 </div>
                 <div class="col-3 d-flex justify-content-center">

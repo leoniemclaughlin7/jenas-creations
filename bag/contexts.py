@@ -44,7 +44,7 @@ def bag_contents(request):
         
 
     for product_id, quantity in bag.items():
-        if product_id == 'custom_order' or product_id == str(1000) or product_id == 'quantity': 
+        if product_id == 'custom_order' or product_id == 'quantity': 
             continue
         product = Product.objects.get(pk=product_id)
         if isinstance(quantity, int) and isinstance(product.price, Decimal):

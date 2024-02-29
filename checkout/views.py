@@ -6,6 +6,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
+from custom_order.models import CustomOrder
 from bag.contexts import bag_contents
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
@@ -56,7 +57,33 @@ def checkout(request):
             order.original_bag = json.dumps(bag)
             order.save()
             for item_id, item_data in bag.items():
+
+                if item_id == 'custom_order':
+                    try:
+                        custom_order_id = bag['custom_order']
+                        if 'quantity' in bag:
+                            quantity = bag['quantity']
+                        else:
+                            quantity = 1
+                        custom_order = CustomOrder.objects.get(id=custom_order_id)
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            custom_order=custom_order,
+                            quantity = quantity
+                        )
+                        order_line_item.save()
+                    except CustomOrder.DoesNotExist:
+                        messages.error(request, (
+                        "The custom order in your bag wasn't found in our database. "
+                        "Please call us for assistance!")
+                    )
+                        order.delete()
+                        return redirect(reverse('view_bag'))
+
+
                 try:
+                    if item_id == 'custom_order' or item_id == 'quantity':
+                        continue
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
@@ -111,10 +138,6 @@ def checkout(request):
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
-
-    if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {

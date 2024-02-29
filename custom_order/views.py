@@ -49,7 +49,8 @@ def add_custom_order_to_bag(request, custom_order_id):
 
 def custom_order_update(request, custom_order_id, quantity):
     bag = request.session.get('bag', {})
-    if 'custom_order' in bag:
+    value = custom_order_id
+    if value in bag.values():
         if int(quantity) > 0:
             bag['quantity'] = quantity
         
@@ -59,6 +60,9 @@ def custom_order_update(request, custom_order_id, quantity):
 
 def custom_order_delete(request, custom_order_id):
     bag = request.session.get('bag', {})
-    bag.pop(custom_order_id)
+    value = custom_order_id
+    if value in bag.values():
+        bag.clear()
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
