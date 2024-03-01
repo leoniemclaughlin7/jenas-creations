@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-3">
                             {% for item in order.lineitems.all %}
-                            <p><strong>{{ item.product.name }} x
+                            <p><strong>{{ item.product.name }}{{ item.custom_order.product_name }} x
                                     {{ item.quantity }}</strong></p>
                             {% endfor %}
                         </div>

@@ -11,11 +11,10 @@ def custom_order(request):
         custom_form = CustomOrderForm(request.POST)
         if custom_form.is_valid():
             custom = custom_form.save(commit=False)
-            user_profile = UserProfile.objects.get(user=request.user)
-            custom.user_profile = user_profile
             custom.save()
+            custom_order_id = custom.pk
             messages.success(request, f'Your custom order has been added to your bag. Price: Eur{custom.price}')
-            return redirect(reverse('price'))
+            return redirect(reverse('price', args=[custom_order_id]))
     else:
         custom_form = CustomOrderForm()
 
@@ -26,9 +25,8 @@ def custom_order(request):
     return render(request, 'custom_order/custom_order.html', context)
 
  
-def custom_order_details(request):
-    user_profile = UserProfile.objects.get(user=request.user)
-    custom_order = get_object_or_404(CustomOrder, user_profile=user_profile)
+def custom_order_details(request, custom_order_id):
+    custom_order = CustomOrder.objects.get(pk=custom_order_id)
     price = custom_order.price
     context = {
         'price': price,
@@ -62,7 +60,9 @@ def custom_order_delete(request, custom_order_id):
     bag = request.session.get('bag', {})
     value = custom_order_id
     if value in bag.values():
-        bag.clear()
+        del bag['custom_order']
+    if 'quantity' in bag:
+        del bag['quantity']
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 

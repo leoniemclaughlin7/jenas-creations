@@ -6,8 +6,6 @@ from profiles.models import UserProfile
 MATERIALS = ((0, 'Polymer Clay'), (1, 'Gemstones and Crystals'), (2, 'Wire'), (3, 'Beads'))
 
 class CustomOrder(models.Model):
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE,
-                                     null=False, blank=False)
     category = models.ForeignKey(Category, null=False, blank=False, on_delete=models.CASCADE)
     material = models.IntegerField(choices=MATERIALS, blank=False)
     product_id = models.IntegerField(blank=False, default=1000)
