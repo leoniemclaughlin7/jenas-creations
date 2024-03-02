@@ -47,8 +47,9 @@
 
 <body>
   <header class="fixed-top">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
-      <a class="navbar-brand" href="{% url 'home' %}">Jenas Creations</a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid custom-nav">
+      <a class="navbar-brand" href="{% url 'home' %}"><i class="fa-regular fa-gem"></i> Jenas Creations <i
+          class="fa-regular fa-gem"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -86,7 +87,7 @@
           </li>
         </ul>
         <form method="GET" action="{% url 'products' %}" class="d-flex">
-          <button class="btn btn-main mr-2" type="submit">Search</button>
+          <button class="btn btn-sm btn-main mr-2" type="submit">Search</button>
           <input class="form-control" type="search" placeholder="Search" name="query" aria-label="Search">
         </form>
         <div class="text-center">

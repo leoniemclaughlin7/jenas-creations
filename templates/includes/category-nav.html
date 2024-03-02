@@ -1,22 +1,24 @@
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
+<nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid custom-nav">
   <div class="row ">
     <div class="col">
       <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item {% for category in current_categories %}{% if category.name == 'Bracelets' %}active{% endif %}{% endfor %}">
+        <li
+          class="nav-item {% for category in current_categories %}{% if category.name == 'Bracelets' %}active{% endif %}{% endfor %}">
           <a class="nav-link" href="{% url 'products' %}?category=Bracelets">Bracelets</a>
         </li>
-        <li class="nav-item {% for category in current_categories %}{% if category.name == 'Phone Charms' %}active{% endif %}{% endfor %}">
+        <li
+          class="nav-item {% for category in current_categories %}{% if category.name == 'Phone Charms' %}active{% endif %}{% endfor %}">
           <a class="nav-link" href="{% url 'products' %}?category=Phone Charms">Phone Charms</a>
         </li>
-        <li class="nav-item {% for category in current_categories %}{% if category.name == 'Earrings' %}active{% endif %}{% endfor %}">
+        <li
+          class="nav-item {% for category in current_categories %}{% if category.name == 'Earrings' %}active{% endif %}{% endfor %}">
           <a class="nav-link" href="{% url 'products' %}?category=Earrings">Earrings</a>
         </li>
-        <li class="nav-item {% for category in current_categories %}{% if category.name == 'Necklaces' %}active{% endif %}{% endfor %}">
+        <li
+          class="nav-item {% for category in current_categories %}{% if category.name == 'Necklaces' %}active{% endif %}{% endfor %}">
           <a class="nav-link" href="{% url 'products' %}?category=Necklaces">Necklaces</a>
         </li>
       </ul>
     </div>
   </div>
-</nav>  
-  
+</nav>

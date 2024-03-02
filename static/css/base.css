@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+h2 {
+    font-family: "Madimi One", sans-serif;
+}
+
 html {
     height: 100%;
 }
@@ -10,12 +16,58 @@ body {
 #hero-image {
     height: 400px;
     width: 100%;
-    background: url("/media/jenas-creations-banner1.png") no-repeat center center;
+    background: url("https://res.cloudinary.com/dcuhp2osv/image/upload/v1707434443/zuqt4k7nwkvgudlrj8lw.png") no-repeat center center;
     background-size: cover;
+}
+
+.shop-now,
+.custom-order {
+    background-color: black;
+    color: pink;
+}
+
+.custom-order {
+    margin-left: 3px;
+}
+
+.btn {
+    color: pink !important;
+}
+
+/* About section */
+.about {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.about-box {
+    color: pink;
+    background-color: black;
+    text-align: justify;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Navbar */
+
+body {
+    background-color: linear-gradient(to right, #fff7ad, #ffa9f9);
 }
 
 .navbar-brand {
     margin-left: 15px;
+    background-color: #000;
+    color: pink;
+    border-radius: 10px;
+}
+
+.navbar-brand:hover {
+    color: pink
+}
+
+.nav-link {
+    color: #000;
 }
 
 .navbar-expand-lg {
@@ -36,7 +88,7 @@ body {
 }
 
 .btn-main {
-    background-color: pink;
+    background-color: #000;
 }
 
 .links {
