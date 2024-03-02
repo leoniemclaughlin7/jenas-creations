@@ -10,6 +10,8 @@ html {
 
 body {
     padding-top: 120px;
+    background-image: linear-gradient(to right, #fff7ad, #ffa9f9);
+
 }
 
 /* Hero Image */
@@ -51,8 +53,8 @@ body {
 
 /* Navbar */
 
-body {
-    background-color: linear-gradient(to right, #fff7ad, #ffa9f9);
+.custom-nav {
+    background-image: linear-gradient(to right, #fff7ad, #ffa9f9);
 }
 
 .navbar-brand {
@@ -217,4 +219,11 @@ select option[value=""] {
     width: 100%;
     overflow-x: hidden;
     overflow-wrap: break-word;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    color: #000;
 }
