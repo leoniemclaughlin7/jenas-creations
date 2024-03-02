@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'profiles',
     'review',
     'custom_order',
+    'contact',
 
 ]
 

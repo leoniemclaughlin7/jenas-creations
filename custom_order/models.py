@@ -1,6 +1,8 @@
 from django.db import models
 from products.models import Category
 from profiles.models import UserProfile
+from django.core.exceptions import ValidationError
+
 
 
 MATERIALS = ((0, 'Polymer Clay'), (1, 'Gemstones and Crystals'), (2, 'Wire'), (3, 'Beads'))
@@ -30,7 +32,7 @@ class CustomOrder(models.Model):
     def clean(self):
         super().clean()
         if self.personalised and not self.name:
-            raise ValidationError({'A name is required for personalised items.'})
+            raise ValidationError({'name':'A name is required for personalised items.'})
 
 
     def save(self, *args, **kwargs):
