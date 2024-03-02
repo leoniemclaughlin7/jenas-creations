@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import CustomOrder
-from profiles.models import UserProfile
 from .forms import CustomOrderForm
 from django.contrib import messages
 

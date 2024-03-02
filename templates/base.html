@@ -127,6 +127,18 @@
     {% endblock %}
   </main>
 
+  <footer class="mt-auto">
+    <p>
+      Follow us: <a target="_blank" href="https://www.facebook.com/" aria-label="Navigates to the facebook page"><i
+          class="fab fa-facebook-square ms-3"></i></a>
+      <a target="_blank" href="https://www.instagram.com/" aria-label="Navigates to the instagram page"><i
+          class="fab fa-instagram-square ms-3"></i></a>
+    </p>
+    <p id="contact-us">
+      <a href="{% url 'contact' %}" class="contact-link" aria-label="Navigates to the contact us page">Contact us</a>
+    </p>
+  </footer>
+
   {% block postloadjs %}
 
   {% endblock %}
