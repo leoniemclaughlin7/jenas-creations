@@ -11,7 +11,6 @@ def bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
 
-    print(bag)
      
     if 'custom_order' in bag:
         custom_order_id = bag['custom_order'] 
@@ -60,11 +59,11 @@ def bag_contents(request):
     
     grand_total = total
     
-
+    print(bag_items)
     context = {
         'bag_items': bag_items,
         'grand_total': grand_total,
-        'product_count': product_count
+        'product_count': product_count,
     }
 
     return context
