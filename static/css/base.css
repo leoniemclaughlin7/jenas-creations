@@ -227,3 +227,9 @@ footer {
     text-align: center;
     color: #000;
 }
+
+/* Forms */
+
+.center-form {
+    text-align: center;
+}
