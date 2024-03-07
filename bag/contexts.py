@@ -57,13 +57,16 @@ def bag_contents(request):
             'individual_total': individual_total,
         })
     
-    grand_total = total
+    delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+    grand_total = total + delivery
     
     print(bag_items)
     context = {
         'bag_items': bag_items,
         'grand_total': grand_total,
         'product_count': product_count,
+        'delivery': delivery,
+        'total': total
     }
 
     return context

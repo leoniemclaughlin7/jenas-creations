@@ -41,10 +41,18 @@
             <hr>
             <div class="d-flex justify-content-between">
                 <div class="col-7">
-                    <p>Grand Total:</p>
+                    <p>Order Total:</p>
+                    <p>Delivery:</p>
+                    <strong>
+                        <p>Grand Total:</p>
+                    </strong>
                 </div>
-                <div class="col-3 d-flex justify-content-center grand-total-pos">
-                    <p><strong>&euro;{{ grand_total | floatformat:2 }}</strong></p>
+                <div class="col-3 d-flex justify-content-center">
+                    <div class="d-flex flex-column">
+                        <p>&euro;{{ total | floatformat:2 }}</p>
+                        <p>&euro;{{ delivery | floatformat:2 }}</p>
+                        <p><strong>&euro;{{ grand_total | floatformat:2 }}</strong></p>
+                    </div>
                 </div>
             </div>
         </div>
