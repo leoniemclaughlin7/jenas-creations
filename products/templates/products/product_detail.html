@@ -18,6 +18,7 @@
             <div>
                 <h2><strong>{{ product.name }}</strong></h2>
                 <p>{{ product.description }}</p>
+                <span>{{ rating|floatformat:1 }}<i class="fas fa-star stars"></i></span>
                 <hr>
                 <p><strong>&euro;{{ product.price }}</strong></p>
                 {% if request.user.is_superuser %}
@@ -108,7 +109,7 @@
                             <span>
                                 {{ review.created_on }}
                             </span>
-                            <span>{{review.stars}}<i class="fas fa-star" style="color: #f9e406;"></i></span>
+                            <span>{{review.stars}}<i class="fas fa-star stars"></i></span>
                         </p>
                         {{ review.body | linebreaks }}
                         {% if user.is_authenticated and user.username == review.name %}

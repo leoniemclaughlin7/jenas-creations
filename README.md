@@ -9,6 +9,7 @@ Clean method on django models: https://docs.djangoproject.com/en/5.0/ref/forms/v
 Save method django: https://docs.djangoproject.com/en/5.0/topics/db/models/
 Retrieving a single object with get(): https://docs.djangoproject.com/en/5.0/topics/db/queries/
 Python get method call: https://www.w3schools.com/python/ref_dictionary_get.asp
+Finding the average: https://docs.djangoproject.com/en/5.0/topics/db/aggregation/ 
 
 
 

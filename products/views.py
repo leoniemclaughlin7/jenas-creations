@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import ProductForm
 from review.models import Review
 from review.forms import ReviewForm
+from django.db.models import Avg
 
 def all_products(request):
     """ A view to show all products """
@@ -35,7 +36,7 @@ def all_products(request):
             else:
                 messages.error(request, "Please enter search criteria!")
                 return redirect(reverse('products'))
-    
+
 
     context = {
         'products': products,
@@ -51,6 +52,9 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.order_by('-created_on').filter(product_id=product_id)
+    avg_rating = Review.objects.filter(product_id=product_id).aggregate(avg_stars=Avg('stars'))
+    rating = avg_rating['avg_stars']
+
     if request.method == 'POST':
         review_form = ReviewForm(request.POST)
 
@@ -68,7 +72,8 @@ def product_detail(request, product_id):
     context = {
         'product': product,
         'review_form': review_form,
-        'reviews': reviews 
+        'reviews': reviews,
+        'rating': rating 
     }
 
     return render(request, 'products/product_detail.html', context)

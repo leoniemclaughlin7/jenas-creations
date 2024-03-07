@@ -36,6 +36,10 @@ body {
     color: pink !important;
 }
 
+.btn:hover {
+    background-color: #000;
+}
+
 /* About section */
 .about {
     text-align: center;
@@ -219,6 +223,10 @@ select option[value=""] {
     width: 100%;
     overflow-x: hidden;
     overflow-wrap: break-word;
+}
+
+.stars {
+    color: #000;
 }
 
 /* Footer */
