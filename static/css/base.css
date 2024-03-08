@@ -11,7 +11,9 @@ html {
 body {
     padding-top: 120px;
     background-image: linear-gradient(to right, #fff7ad, #ffa9f9);
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Hero Image */
@@ -232,9 +234,7 @@ select option[value=""] {
 /* Footer */
 
 footer {
-    margin-top: 15px;
     color: #000;
-    padding-bottom: 15px;
 }
 
 .footer-icon {
@@ -256,9 +256,6 @@ footer {
 
 /* Forms */
 
-.center-form {
-    text-align: center;
-}
 
 /* Messages */
 .message-container {
@@ -289,4 +286,8 @@ footer {
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
     width: 350px;
+}
+
+.main-container {
+    flex: 1;
 }
