@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Timeout function for messages taken from I Think Therefore I Blog walkthrough
-  setTimeout(function () {
-    let messages = document.getElementById("msg");
-    let alert = new bootstrap.Alert(messages);
-    alert.close();
-  }, 6000);
 
   var allQtyInputs = $('.quantity');
   for (var i = 0; i < allQtyInputs.length; i++) {
@@ -46,5 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
     handleEnableDisable(productId);
   });
 
+});
 
+document.addEventListener('DOMContentLoaded', function () {
+  var toasts = document.querySelector('.toast');
+  var toast = new bootstrap.Toast(toasts);
+
+  toast.show();
+
+  var toastClose = toasts.querySelector('.close');
+  toastClose.addEventListener('click', function () {
+    toast.hide();
+  });
 });
