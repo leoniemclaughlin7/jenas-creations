@@ -40,6 +40,8 @@ def add_custom_order_to_bag(request, custom_order_id):
     bag = request.session.get('bag', {})
 
     bag['custom_order'] = custom_order_id
+    messages.success(
+                request, 'Added custom order to your bag.')
    
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -50,6 +52,8 @@ def custom_order_update(request, custom_order_id, quantity):
     if value in bag.values():
         if int(quantity) > 0:
             bag['quantity'] = quantity
+            messages.success(
+                request, f'Updated custom order quantity to {quantity}')
         
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -60,6 +64,7 @@ def custom_order_delete(request, custom_order_id):
     value = custom_order_id
     if value in bag.values():
         del bag['custom_order']
+        messages.success(request, 'Removed custom order from your bag')
     if 'quantity' in bag:
         del bag['quantity']
     request.session['bag'] = bag

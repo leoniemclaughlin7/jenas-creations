@@ -19,6 +19,8 @@ def add_to_bag(request, product_id):
 
     if product_id in list(bag.keys()):
         bag[product_id] += quantity
+        messages.success(
+                request, f'Updated {product.name} quantity to {bag[product_id]}')
     else:
         bag[product_id] = quantity
         messages.success(request, f'{product.name} has been added to your bag!')
@@ -37,8 +39,11 @@ def update_bag(request, product_id):
             
     if quantity > 0:
         bag[product_id] = quantity
+        messages.success(
+                request, f'Updated {product.name} quantity to {bag[product_id]}')
     else:
         bag.pop(product_id, None)
+        messages.success(request, f'Removed {product.name} from your bag')
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
@@ -51,5 +56,7 @@ def remove_from_bag(request, product_id):
             return redirect(reverse('custom_order_delete', args=[custom_order_id]))
 
     bag.pop(product_id)
+    messages.success(request, f'Removed {product.name} from your bag')
+    
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
