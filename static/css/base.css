@@ -81,7 +81,7 @@ body {
 }
 
 .nav-item.active a.nav-link {
-    color: pink;
+    color: #CF4A72;
 }
 
 .shopping-bag-pos {
@@ -98,7 +98,7 @@ body {
 }
 
 .links {
-    color: pink;
+    color: #CF4A72;
 }
 
 .card-imaged-sized {
@@ -232,8 +232,26 @@ select option[value=""] {
 /* Footer */
 
 footer {
-    text-align: center;
+    margin-top: 15px;
     color: #000;
+    padding-bottom: 15px;
+}
+
+.footer-icon {
+    color: #000;
+}
+
+.footer-links {
+    margin-top: 85px;
+}
+
+.footer-links>p {
+    text-align: center;
+    font-size: 120%;
+}
+
+.footer-text {
+    margin-top: 85px;
 }
 
 /* Forms */
@@ -262,4 +280,13 @@ footer {
 
 .user-messages-pos {
     margin-top: -120px;
+}
+
+/* Mailchimp */
+
+#mc_embed_signup {
+    background-image: linear-gradient(to right, #ffc4de, #ffb3ef);
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 350px;
 }
