@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import ProductForm
 from review.models import Review
 from review.forms import ReviewForm
+from contact.models import Contact
 from django.db.models import Avg
 
 def all_products(request):
@@ -80,10 +81,13 @@ def product_detail(request, product_id):
 
 @login_required 
 def add_product(request):
-    """ Add a product to the store """
+    """ Add a product to the store and display contact messages """
     if not request.user.is_superuser:
         messages.error(request, 'Request denied! You do not have authorisation to add products.')
         return redirect(reverse('home'))
+
+    contact = Contact.objects.order_by('-created_on').all()
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -98,6 +102,7 @@ def add_product(request):
     
     context = {
         'form': form,
+        'contact': contact
     }
  
     return render(request, 'products/add_product.html', context)

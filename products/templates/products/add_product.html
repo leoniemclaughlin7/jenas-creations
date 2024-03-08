@@ -23,6 +23,30 @@
                 </div>
             </form>
         </div>
+
+        <div class="col-12 col-md-6 user-messages-pos">
+            <hr>
+            <h2>User messages:</h2>
+            <hr>
+            <div class="card-body reviews">
+                {% for message in contact %}
+                <div>
+                    <p>
+                        <strong>{{ message.full_name }}</strong>
+                        <span>
+                            {{ message.created_on }}
+                        </span>
+                        <p>
+                            <span>{{message.email}}</span>
+                        </p>
+                    </p>
+                    <p>
+                        {{ message.message | linebreaks }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
