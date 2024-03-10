@@ -21,7 +21,7 @@ body {
     height: 400px;
     width: 100%;
     background: url("https://res.cloudinary.com/dcuhp2osv/image/upload/v1707434443/zuqt4k7nwkvgudlrj8lw.png") no-repeat center center;
-    background-size: cover;
+    background-size: contain;
 }
 
 .shop-now,
@@ -129,7 +129,8 @@ body {
 }
 
 .remove-pos {
-    margin-top: -29px;
+    margin-top: -80px;
+    margin-left: 260px;
 }
 
 .row {
@@ -256,6 +257,11 @@ footer {
 
 /* Forms */
 
+#quantity-form {
+    width: 50%;
+    margin-top: 5px;
+}
+
 
 /* Messages */
 .message-container {
@@ -285,7 +291,7 @@ footer {
     background-image: linear-gradient(to right, #ffc4de, #ffb3ef);
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
-    width: 300px;
+    width: 310px;
 }
 
 .main-container {
@@ -313,5 +319,43 @@ footer {
 
     .about-box {
         margin-left: 5px;
+    }
+
+    #quantity-form {
+        width: 70%;
+    }
+
+    .remove-pos {
+        display: flex;
+        justify-content: start;
+        margin-left: 80px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .text-overlay h2 {
+        font-size: 80%;
+    }
+
+    .text-overlay button {
+        width: 60px;
+        height: 30px;
+    }
+
+    .text-overlay a {
+        font-size: 7px;
+    }
+
+    #quantity-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .remove-pos {
+        display: flex;
+        justify-content: start;
+        margin-left: 80px;
     }
 }

@@ -32,6 +32,7 @@ def add_to_bag(request, product_id):
 def update_bag(request, product_id):
     bag = request.session.get('bag', {})
     quantity = int(request.POST.get('quantity'))
+    product = get_object_or_404(Product, pk=product_id)
     if product_id == str(1000):
         if 'custom_order' in bag:
             custom_order_id = bag['custom_order']
@@ -49,6 +50,7 @@ def update_bag(request, product_id):
 
 def remove_from_bag(request, product_id):
     bag = request.session.get('bag', {})
+    product = get_object_or_404(Product, pk=product_id)
 
     if product_id == str(1000):
         if 'custom_order' in bag:
