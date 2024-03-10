@@ -23,7 +23,9 @@
         </div>
         <div class="col-12 col-lg-6">
             <div class="container order-history">
-                <p>Order History</p>
+                <hr>
+                <h2>Order History</h2>
+                <hr>
                 {% for order in orders %}
                 <div class="row">
                     <div class="col-3">
@@ -49,7 +51,7 @@
                         </div>
                         <div class="col-3">
                             <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
-                                {{ order.order_number|truncatechars:8 }}
+                                {{ order.order_number|truncatechars:6 }}
                             </a>
                         </div>
                         <div class="col-3">

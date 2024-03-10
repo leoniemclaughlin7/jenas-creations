@@ -133,10 +133,6 @@ body {
     margin-left: 260px;
 }
 
-.row {
-    margin-right: 0 !important;
-}
-
 /* Stripe */
 
 .StripeElement,
@@ -357,5 +353,12 @@ footer {
         display: flex;
         justify-content: start;
         margin-left: 80px;
+    }
+}
+
+@media (max-width: 375px) {
+    .message-container {
+        width: 70%;
+
     }
 }
