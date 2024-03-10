@@ -12,14 +12,16 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
-            <form method="POST" action="{% url 'contact' %}">
-                {% csrf_token %}
-                {{ contact | crispy }}
-                <div class="d-flex justify-content-center mt-3">
-                    <button class="btn btn-lg btn-main" type="submit">Submit</button>
-                </div>
-            </form>
+        <div class="d-flex justify-content-center">
+            <div class="col-lg-6 col-12 center-form">
+                <form method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    {{ contact | crispy }}
+                    <div class="d-flex justify-content-center mt-3">
+                        <button class="btn btn-lg btn-main" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
