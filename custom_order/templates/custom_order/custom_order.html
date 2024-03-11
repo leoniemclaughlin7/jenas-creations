@@ -12,13 +12,29 @@
     </div>
 
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 custom-order-box order-md-2">
+            <p class="text-center"><strong>You can only checkout 1 custom order at a time!</strong></p>
+            <p class="text-center">The price for your custom order is dependend on the material you choose and also if
+                you choose a charm or
+                personalisation.
+                <ul>
+                    <li>Polymer Clay is &euro;8</li>
+                    <li>Gemstones and Crystals is &euro;14</li>
+                    <li>Wire is &euro;10</li>
+                    <li>Beads is &euro;8</li>
+                </ul>
+                For a charm to be added it is &euro;2.50 extra and for personalisation it is also &euro;2.50.
+                Personalised
+                items can only contain a name or a word. Thanks for your custom order.
+            </p>
+        </div>
+        <div class="col-12 col-md-6 order-md-1">
             <form method="POST" action="{% url 'custom_order' %}">
                 {% csrf_token %}
                 {{ custom_form | crispy }}
                 <div class="d-flex justify-content-between mt-3">
-                    <a class="btn btn-lg btn-secondary" href="{% url 'products' %}">All products</a>
-                    <button class="btn btn-lg btn-main" type="submit">Place custom order</button>
+                    <a class="btn btn-secondary mr-2" href="{% url 'products' %}">All products</a>
+                    <button class="btn btn-main" type="submit">Place custom order</button>
                 </div>
             </form>
         </div>

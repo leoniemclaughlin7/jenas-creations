@@ -32,12 +32,14 @@ def add_to_bag(request, product_id):
 def update_bag(request, product_id):
     bag = request.session.get('bag', {})
     quantity = int(request.POST.get('quantity'))
-    product = get_object_or_404(Product, pk=product_id)
+    
     if product_id == str(1000):
         if 'custom_order' in bag:
             custom_order_id = bag['custom_order']
             return redirect(reverse('custom_order_update', args=[custom_order_id, quantity]))
-            
+
+    product = get_object_or_404(Product, pk=product_id)
+
     if quantity > 0:
         bag[product_id] = quantity
         messages.success(
@@ -50,13 +52,13 @@ def update_bag(request, product_id):
 
 def remove_from_bag(request, product_id):
     bag = request.session.get('bag', {})
-    product = get_object_or_404(Product, pk=product_id)
 
     if product_id == str(1000):
         if 'custom_order' in bag:
             custom_order_id = bag['custom_order']
             return redirect(reverse('custom_order_delete', args=[custom_order_id]))
 
+    product = get_object_or_404(Product, pk=product_id)
     bag.pop(product_id)
     messages.success(request, f'Removed {product.name} from your bag')
     

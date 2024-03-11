@@ -251,6 +251,15 @@ footer {
     margin-top: 85px;
 }
 
+/* Custom-order */
+.custom-order-box {
+    color: pink;
+    background-color: black;
+    text-align: justify;
+    border-radius: 10px;
+    height: fit-content;
+}
+
 /* Forms */
 
 #quantity-form {
@@ -313,10 +322,6 @@ footer {
         margin-top: 20px;
     }
 
-    .about-box {
-        margin-left: 5px;
-    }
-
     #quantity-form {
         width: 70%;
     }
@@ -359,6 +364,5 @@ footer {
 @media (max-width: 375px) {
     .message-container {
         width: 70%;
-
     }
 }

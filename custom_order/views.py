@@ -12,7 +12,6 @@ def custom_order(request):
             custom = custom_form.save(commit=False)
             custom.save()
             custom_order_id = custom.pk
-            messages.success(request, f'Your custom order has been added to your bag. Price: Eur{custom.price}')
             return redirect(reverse('price', args=[custom_order_id]))
     else:
         custom_form = CustomOrderForm()
