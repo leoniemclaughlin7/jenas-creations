@@ -32,7 +32,7 @@ https://i.pinimg.com/originals/f9/6b/83/f96b83ad835da2d7a8b52ded28a5222b.jpg
 
 https://i.pinimg.com/originals/59/66/72/59667237b23aa86ed09c79e6b5726f9b.jpg
 
-https://imagedelivery.net/0ObHXyjKhN5YJrtuYFSvjQ/i-3f2d01b7-97eb-48f4-9e16-d75ef1bebd21-green-agate-bracelet-maxymoobear/featureditemlargei
+https://assets0.mirraw.com/images/6934949/image_zoom.jpeg?1555137275
 
 https://m.media-amazon.com/images/I/41Nnf+goGCL._AC_UL480_FMwebp_QL65_.jpg
 
