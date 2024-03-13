@@ -5,10 +5,14 @@ from products.models import Product
 from custom_order.models import CustomOrder
 
 def bag_contents(request):
+    """
+    Sets the contents for the items in the bag. Deals with normal products
+    and custom orders. Calculates the delivery cost based on a percentage.
+    Returns bag-items, grand-total, delivery and total in the context.
+    """
 
     bag_items = []
     total = 0
-    product_count = 0
     bag = request.session.get('bag', {})
 
      
@@ -60,11 +64,9 @@ def bag_contents(request):
     delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
     grand_total = total + delivery
     
-    print(bag_items)
     context = {
         'bag_items': bag_items,
         'grand_total': grand_total,
-        'product_count': product_count,
         'delivery': delivery,
         'total': total
     }

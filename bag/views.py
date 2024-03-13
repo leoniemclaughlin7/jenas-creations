@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from products.models import Product
 
+
 def view_bag(request):
     """
     A view to return bag page
@@ -10,7 +11,9 @@ def view_bag(request):
 
 
 def add_to_bag(request, product_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ 
+    Add a quantity of the specified product to the shopping bag 
+    """
     product = get_object_or_404(Product, pk=product_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -30,6 +33,10 @@ def add_to_bag(request, product_id):
 
 
 def update_bag(request, product_id):
+    """
+    Update the quantity of items in the bag, if a custom order
+    is being updated redirect to the custom-order-update view
+    """
     bag = request.session.get('bag', {})
     quantity = int(request.POST.get('quantity'))
     
@@ -50,7 +57,12 @@ def update_bag(request, product_id):
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
+
 def remove_from_bag(request, product_id):
+    """
+    Remove items from the bag, if a custom order is being removed redirect
+    to custom-order-delete view
+    """
     bag = request.session.get('bag', {})
 
     if product_id == str(1000):

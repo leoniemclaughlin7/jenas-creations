@@ -15,6 +15,7 @@
         </div>
     </div>
 
+    <!--Display items in shopping bag-->
     <div class="row">
         <div class="col">
             {% if bag_items %}
@@ -32,6 +33,7 @@
                     <p><strong>Subtotal: &euro;{{ item.individual_total }}</strong></p>
                 </div>
             </div>
+            <!--Quantity selector form (taken from Boutique Ado walkthrough)-->
             <p><strong>Quantity:</strong></p>
             <form class="form" action="{% url 'update_bag' item.product_id %}" method="POST" id="quantity-form">
                 {% csrf_token %}
@@ -72,6 +74,7 @@
                 </a>
             </div>
             {% endfor %}
+            <!--Bag totals-->
             <div class="d-flex justify-content-end">
                 <div class=" flex-column">
                     <h6><strong>Bag Total: &euro;{{ total|floatformat:2 }}</strong></h6>
@@ -79,6 +82,7 @@
                     <h4><strong>Grand Total: &euro;{{ grand_total|floatformat:2 }}</strong></h4>
                 </div>
             </div>
+            <!--Keep shopping and Secure checkout buttons-->
             <div class="d-flex justify-content-end">
                 <a href="{% url 'products' %}" class="btn btn-secondary rounded">
                     <span class="icon">
