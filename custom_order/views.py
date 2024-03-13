@@ -5,7 +5,9 @@ from django.contrib import messages
 
 
 def custom_order(request):
-    """ A view to display custom_order form """
+    """ 
+    A view to display custom_order form 
+    """
     if request.method == 'POST':
         custom_form = CustomOrderForm(request.POST)
         if custom_form.is_valid():
@@ -24,6 +26,9 @@ def custom_order(request):
 
  
 def custom_order_details(request, custom_order_id):
+    """
+    A view to display the price of the custom order to the customer.
+    """
     custom_order = CustomOrder.objects.get(pk=custom_order_id)
     price = custom_order.price
     context = {
@@ -33,8 +38,11 @@ def custom_order_details(request, custom_order_id):
 
     return render(request, 'custom_order/custom_order_price.html', context)
 
+
 def add_custom_order_to_bag(request, custom_order_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ 
+    Add custom order to the shopping bag 
+    """
     custom_order = CustomOrder.objects.get(pk=custom_order_id)
     bag = request.session.get('bag', {})
 
@@ -45,7 +53,11 @@ def add_custom_order_to_bag(request, custom_order_id):
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
+
 def custom_order_update(request, custom_order_id, quantity):
+    """
+    Update the quantity of a custom order.
+    """
     bag = request.session.get('bag', {})
     value = custom_order_id
     if value in bag.values():
@@ -59,6 +71,9 @@ def custom_order_update(request, custom_order_id, quantity):
 
 
 def custom_order_delete(request, custom_order_id):
+    """
+    Deletes custom order from bag.
+    """
     bag = request.session.get('bag', {})
     value = custom_order_id
     if value in bag.values():

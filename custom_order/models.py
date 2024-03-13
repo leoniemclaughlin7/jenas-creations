@@ -30,6 +30,11 @@ class CustomOrder(models.Model):
 
 
     def clean(self):
+        """ 
+        Overrides the clean method to add form validation. 
+        If customer chooses personalised they must supply 
+        a name in the name field.
+        """
         super().clean()
         if self.personalised and not self.name:
             raise ValidationError({'name':'A name is required for personalised items.'})
@@ -37,7 +42,9 @@ class CustomOrder(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the price.
+        Override the original save method to set the price. price is determined 
+        on the choice of material. If a customer chooses to add a charm it will
+        add 2.50. If personalised is chosen it adds 2.50 to the price. 
         """
 
         material_price = self.MATERIAL_PRICES.get(self.material, 0)

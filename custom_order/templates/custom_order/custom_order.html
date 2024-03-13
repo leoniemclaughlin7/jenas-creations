@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!--Create your own product header-->
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6">
@@ -11,6 +12,7 @@
         </div>
     </div>
 
+    <!--Information regarding placing a custom order-->
     <div class="row">
         <div class="col-12 col-md-6 custom-order-box order-md-2">
             <p class="text-center"><strong>You can only checkout 1 custom order at a time!</strong></p>
@@ -28,6 +30,7 @@
                 items can only contain a name or a word. Thanks for your custom order.
             </p>
         </div>
+        <!--Custom order form-->
         <div class="col-12 col-md-6 order-md-1">
             <form method="POST" action="{% url 'custom_order' %}">
                 {% csrf_token %}
