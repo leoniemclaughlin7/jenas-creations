@@ -3,6 +3,10 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """
+    OrderForm set up, using the order model and displays the
+    fields stipulated below.
+    """
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
@@ -13,7 +17,8 @@ class OrderForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        labels and set autofocus on first field. Inspired by 
+        Boutique Ado walkthrough. 
         """
         super().__init__(*args, **kwargs)
         placeholders = {

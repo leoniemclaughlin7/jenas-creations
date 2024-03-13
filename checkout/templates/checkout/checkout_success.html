@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!--Order thank you message containing email, order number and date-->
 <div class="container">
   <div class="row">
     <div class="col">
@@ -14,6 +15,7 @@
     </div>
   </div>
 
+  <!--Details of the order-->
   <div class="row">
     <div class="col-12 col-lg-6">
       <p>Your Order</p>
@@ -41,6 +43,7 @@
       </div>
       {% endfor %}
       <hr>
+      <!--Displays grand total-->
       <div class="d-flex justify-content-between">
         <div class="col-7">
           <p>Grand Total:</p>
@@ -50,6 +53,7 @@
         </div>
       </div>
     </div>
+    <!--Table displays shoppers delivery information-->
     <div class="col-12 col-lg-6">
       <strong>Delievery info:</strong>
       <table class="table table-sm">

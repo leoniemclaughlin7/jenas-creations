@@ -14,8 +14,14 @@ from profiles.forms import UserProfileForm
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
+    """
+    Handles a post request to modify a stripe payment intent. If 
+    successful it returns a status 200 or if it fails a status 400
+    with an error message.
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -32,6 +38,9 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    A view to handle the stripe checkout process.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -189,3 +198,4 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+    

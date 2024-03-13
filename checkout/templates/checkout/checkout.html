@@ -3,6 +3,7 @@
 
 
 {% block content %}
+<!--Checkout header-->
 <div class="container">
     <div class="row">
         <div class="col">
@@ -12,9 +13,10 @@
         </div>
     </div>
 
+    <!--A checkout summary for items in shoppers bag-->
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p>Order Summary ({{ product_count }})</p>
+            <p>Order Summary</p>
             <div class="row">
                 <div class="col-9">
                     <p>Item</p>
@@ -56,6 +58,7 @@
                 </div>
             </div>
         </div>
+        <!--Checkout form-->
         <div class="col-12 col-lg-6">
             <h4>Please fill out the form below to complete your order</h4>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -95,6 +98,7 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
+                <!--Adjust bag or complete order buttons-->
                 <div class="d-flex justify-content-end">
                     <a href="{% url 'view_bag' %}" class="btn btn-secondary rounded">
                         <span class="icon">
@@ -120,6 +124,7 @@
     </div>
 </div>
 
+<!--Loading overlay for when payment is being processed-->
 <div id="loading-overlay">
     <h1 class="text-light loading-spinner">
         <span class="icon">
