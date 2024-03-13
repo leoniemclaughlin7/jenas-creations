@@ -8,6 +8,11 @@ from checkout.models import Order
 
 @login_required 
 def profile(request):
+    """ 
+    A view to get users profile. If request method is post save user
+    profile form. Also returns all users orders with the most recent
+    first.
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
@@ -31,6 +36,9 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    A view to return the order history for a specific users order.
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
@@ -44,3 +52,4 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+    
