@@ -9,9 +9,12 @@ from review.forms import ReviewForm
 from contact.models import Contact
 from django.db.models import Avg
 
-def all_products(request):
-    """ A view to show all products """
 
+def all_products(request):
+    """
+    A view to show all products. Sorting products by category,
+    search querys and sorting products by price. 
+    """
     products = Product.objects.all()
     categories = None
     search_query = None
@@ -49,7 +52,10 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to display product details """
+    """ 
+    A view to display product details. Also displays 
+    review form, reviews and avg_rating. 
+    """
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.order_by('-created_on').filter(product_id=product_id)
@@ -81,7 +87,9 @@ def product_detail(request, product_id):
 
 @login_required 
 def add_product(request):
-    """ Add a product to the store and display contact messages """
+    """
+    Add a product to the store and display contact messages 
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Request denied! You do not have authorisation to add products.')
         return redirect(reverse('home'))
@@ -110,7 +118,9 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """
+     Edit a product in the store 
+     """
     if not request.user.is_superuser:
         messages.error(request, 'Request denied! You do not have authorisation to edit products.')
         return redirect(reverse('home'))
@@ -136,7 +146,9 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the site """
+    """
+    Delete a product from the site
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Request denied! You do not have authorisation to delete products.')
         return redirect(reverse('home'))
@@ -144,4 +156,3 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
-

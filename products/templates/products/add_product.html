@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!--Product management header-->
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6">
@@ -12,6 +13,7 @@
         </div>
     </div>
 
+    <!--Add product form-->
     <div class="row">
         <div class="col-12 col-md-6">
             <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data">
@@ -24,6 +26,7 @@
             </form>
         </div>
 
+        <!--Displays users messages to admin-->
         <div class="col-12 col-md-6 user-messages-pos">
             <hr>
             <h2>User messages:</h2>

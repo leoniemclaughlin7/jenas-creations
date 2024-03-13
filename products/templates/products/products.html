@@ -5,12 +5,15 @@
 {% endblock %}
 
 {% block content %}
+<!--Products header-->
 <section class="container">
     <div class="row">
         <div class="text-center">
             <h2>Products</h2>
         </div>
     </div>
+
+    <!--If user has entered a search query show how many results are returned-->
     <div class="container">
         <div class="row">
             <div class="col-12 text-left">
@@ -23,6 +26,7 @@
             </div>
         </div>
     </div>
+    <!--Displays products, including name and price-->
     <div class="row">
         <div class="container">
             <div class="row">
@@ -38,6 +42,7 @@
                             <hr>
                             <p><strong>&euro;{{ product.price }}</strong></p>
                         </div>
+                        <!--If superuser show edit and delete buttons-->
                         {% if request.user.is_superuser %}
                         <small>
                             <a href="{% url 'edit_product' product.id %}">Edit</a> |

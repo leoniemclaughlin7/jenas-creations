@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+<!--Product image, description and price-->
 <section class="container">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
@@ -21,12 +22,14 @@
             <span>{{ rating|floatformat:1 }}<i class="fas fa-star stars"></i></span>
             <hr>
             <p><strong>&euro;{{ product.price }}</strong></p>
+            <!--If superuser display edit and delete buttons-->
             {% if request.user.is_superuser %}
             <small class="ml-3">
                 <a href="{% url 'edit_product' product.id %}">Edit</a> |
                 <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
             </small>
             {% endif %}
+            <!--Add quantity of product form-->
             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                 {% csrf_token %}
                 <div>
@@ -54,6 +57,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!--Keep shopping and add to bag buttons-->
                         <div class="col-12 d-flex">
                             <a href="{% url 'products' %}" class="btn btn-sm btn-secondary rounded-0 mt-5">
                                 <span class="icon">
@@ -75,6 +79,7 @@
         </div>
     </div>
 </section>
+<!--Review section-->
 <section>
     <div class="container">
         <div class="row d-flex justify-content-between">
@@ -96,6 +101,7 @@
             {% else %}
             <div class="col-12 col-lg-6"></div>
             {% endif %}
+            <!--Show reviews left by users-->
             <div class="col-lg-6 col-sm-12">
                 <hr>
                 <h2>Reviews:</h2>
@@ -111,6 +117,7 @@
                             <span>{{review.stars}}<i class="fas fa-star stars"></i></span>
                         </p>
                         {{ review.body | linebreaks }}
+                        <!--If user owns review allow edit and delete of review-->
                         {% if user.is_authenticated and user.username == review.name %}
                         <small>
                             <a href="{% url 'edit_review' review.id %}">Edit</a> |
