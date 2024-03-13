@@ -83,4 +83,3 @@ def custom_order_delete(request, custom_order_id):
         del bag['quantity']
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
-

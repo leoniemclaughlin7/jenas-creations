@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 def index(request):
     """
-    A view to return index page 
+    A view to return index page and show/hide
+    custom order button as neccessary. 
     """
     bag = request.session.get('bag', {})
     show_custom_order_link = True
