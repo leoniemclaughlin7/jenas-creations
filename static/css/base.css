@@ -16,6 +16,10 @@ body {
     min-height: 100vh;
 }
 
+.main-container {
+    flex: 1;
+}
+
 /* Hero Image */
 #hero-image {
     height: 400px;
@@ -23,6 +27,8 @@ body {
     background: url("https://res.cloudinary.com/dcuhp2osv/image/upload/v1707434443/zuqt4k7nwkvgudlrj8lw.png") no-repeat center center;
     background-size: contain;
 }
+
+/* Buttons */
 
 .shop-now,
 .custom-order {
@@ -40,6 +46,19 @@ body {
 
 .btn:hover {
     background-color: #000;
+}
+
+.btn-main {
+    background-color: #000;
+}
+
+.add-to-bag {
+    margin-left: 10px;
+}
+
+.remove-pos {
+    margin-top: -80px;
+    margin-left: 260px;
 }
 
 /* About section */
@@ -90,47 +109,26 @@ body {
     padding: 0 30px 0 30px;
 }
 
-.center-form {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.btn-main {
-    background-color: #000;
-}
+/* Links */
 
 .links {
     color: #CF4A72;
 }
 
+/* Card Image */
+
 .card-imaged-sized {
     height: 300px;
 }
 
-/* from Bulma */
+/* Icons - from Bulma */
+
 .icon {
     align-items: center;
     display: inline-flex;
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
-}
-
-.add-to-bag {
-    margin-left: 10px;
-}
-
-#bag-table {
-    width: 100%;
-}
-
-.checkout-pos {
-    margin-left: 10px;
-}
-
-.remove-pos {
-    margin-top: -80px;
-    margin-left: 260px;
 }
 
 /* Stripe */
@@ -206,6 +204,10 @@ select option[value=""] {
     color: #aab7c4 !important;
 }
 
+.checkout-pos {
+    margin-left: 10px;
+}
+
 /* profile page */
 
 .order-history {
@@ -252,6 +254,7 @@ footer {
 }
 
 /* Custom-order */
+
 .custom-order-box {
     color: pink;
     background-color: black;
@@ -267,8 +270,13 @@ footer {
     margin-top: 5px;
 }
 
+.center-form {
+    text-align: center;
+    margin-top: 20px;
+}
 
 /* Messages */
+
 .message-container {
     position: fixed;
     top: 72px;
@@ -297,10 +305,6 @@ footer {
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
     width: 310px;
-}
-
-.main-container {
-    flex: 1;
 }
 
 /* Images */
