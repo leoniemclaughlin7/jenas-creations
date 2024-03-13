@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!--Edit review header-->
 <section>
     <div class="conatiner">
         <div class="row">
@@ -10,6 +11,7 @@
                 <h2>Edit Review:</h2>
                 <hr>
             </div>
+            <!--Edit review form-->
             <div class="col-12 col-lg-6 d-flex justify-content-center">
                 <form method="post" action="{% url 'edit_review' review.id %}">
                     {{ form | crispy }}
