@@ -1,3 +1,27 @@
+# Jenas Creations
+
+Jenas Creations is an online homemade jewellery store. This e-commerce application allows shoppers to browse products that are on offer for sale from Four categories, bracelets, necklaces, earrings and phone charms. Shoppers can also create a custom product, choosing the category, material, colour scheme, personalisation and add a charm if they would like as well as including any additional details they feel are needed in order to make their product unique and a treasured piece in their collection. The application allows shoppers to add products and a custom order to their bag, checkout and receive email conformation of their order, as well as additional features such as leaving reviews on products, contact admin with any queries and search for specific products.   
+
+A live version of the project can be accessed here: [Jenas Creations](https://jenas-creations-ad878282c6a4.herokuapp.com/)
+
+<img src="../docs/readme_images/jenas-creations-mockup.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Credits 
 Connecting social accounts: https://www.marinamele.com/user-authentication-with-google-using-django-allauth
 Django order_by: https://stackoverflow.com/questions/9834038/django-order-by-query-set-ascending-and-descending 
