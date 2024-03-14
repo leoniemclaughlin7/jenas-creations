@@ -6,6 +6,36 @@ A live version of the project can be accessed here: [Jenas Creations](https://je
 
 <img src="../docs/readme_images/jenas-creations-mockup.png">
 
+# User Experience Design
+
+## User Demographic
+
+This website is intended for:
+
+* Users that have a keen interest homemade jewellery.
+* Users that would like to purchase homemade jewellery.
+* Users that would like to have a custom order made for them.
+* Users that are interested in browsing an online store and adding items to their bag.  
+
+## User Stories
+
+As a User of this website:
+
+* I want to browse a selection of products available. 
+* I want to be able to give my preferences for a custom order. 
+* I want to purchase homemade jewellery. 
+* I want to be able to leave a review of the product I purchased.
+* I want to be able to contact site admin with any inquires I may have.
+* I want to be able to manage my reviews.
+* I want to be able to save my delivery information. 
+* I want to be able to see my order history. 
+
+## Entity Relationship Diagram
+
+The entity relationship diagram for this application was generated from Django. A link to the tutorial on how to generate the diagram can be found in the credits section. Some considerations with this entity relationship diagram include the foreign key relationships. A foreign key relationship links Two tables, the column of One table is linked to the primary key of another table, allowing that table to access the information stored in the table with the foreign key relationship. Some key foreign key relationships in this entity relationship diagram is the relationship between user profile and order, connecting a user to an order. Orderlineitem table has Three foreign key relationships to custom order, order and product. Both custom order and product have a foreign key relationship to the category table and product has a foreign key relationship to the review table, ensuring the reviews are left for a specific product. 
+
+<img src="../docs/readme_images/erd.png">
+
 
 
 
