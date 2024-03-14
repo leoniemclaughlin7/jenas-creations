@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://jenas-creations-ad878282c6a4.herokuapp.com/sitemap.xml
