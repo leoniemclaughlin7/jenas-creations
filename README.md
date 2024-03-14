@@ -12,6 +12,7 @@ Python get method call: https://www.w3schools.com/python/ref_dictionary_get.asp
 Finding the average: https://docs.djangoproject.com/en/5.0/topics/db/aggregation/ 
 Toasts: https://getbootstrap.com/docs/5.3/components/toasts/#events
 Fix footer to bottom with flex: https://stackoverflow.com/questions/55541850/how-to-make-footer-stay-at-bottom-of-the-page-with-flex-box 
+ERD: https://www.wplogout.com/export-database-diagrams-erd-from-django/
 
 
 
