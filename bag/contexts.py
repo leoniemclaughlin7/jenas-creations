@@ -53,7 +53,6 @@ def bag_contents(request):
         if isinstance(quantity, int) and isinstance(product.price, Decimal):
             total += quantity * product.price
             individual_total = quantity * product.price
-            product_count += quantity
             bag_items.append({
             'product_id': product_id,
             'quantity': quantity,
