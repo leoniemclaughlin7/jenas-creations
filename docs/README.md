@@ -78,6 +78,28 @@ The colour palette for this website was created using [Coolors](https://coolors.
 
 The fonts for the site where imported from Google fonts. For the headings [Madimi One](https://fonts.google.com/specimen/Madimi+One) was used. This font was chosen as it fit the aesthetic of the site, it has a homemade feel to it and complemented other design features. The font also has a second font of Sans-Serif set in case the chosen font dose not work on the users browser.  
 
+# Agile
+
+Jenas Creations was developed using Agile Development Methodology. A detailed overview of the Agile process is available [here.](../docs/AGILE.md)
+
+[back to top](#jenas-creations)
+
+# Technologies used
+
+* <b>Python</b> - This application was developed using Python.
+* <b>Django</b> - The Django framework was used to develop this application.
+* <b>Django AllAuth</b> - Used to create account, login and logout users of the site.
+* <b>PostgreSQL</b> - PostgreSQL from code institute was used to host the external database.  
+* <b>Heroku</b> - Used for deployment.
+* <b>GitHub</b> - The code for this application is stored on GitHub.
+* <b>Git</b> - Used for version control.  
+* <b>Gitpod</b> - IDE used for creating the application.
+* <b>Bootstrap</b> - Bootstrap was used for the fast development of the layout and styling of Jenas Creations.
+* <b>Font Awesome</b> - Icons where used to provide visual feedback.
+* <b>HTML</b> - HTML was used to develop the templates in this project.
+* <b>CSS</b> - Custom CSS was created to aid with the styling of Jenas Creations.
+* <b>JavaScript</b> - Custom JavaScript was used in the development of this site.
+
 
 
 
