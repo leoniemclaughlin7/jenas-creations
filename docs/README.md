@@ -64,6 +64,20 @@ Wireframes were produced for the home, products, product detail, shopping bag, c
 
 <img src="../docs/readme_images/wireframe-checkout-success.png">
 
+## Design
+
+The objective of this project was to design an e-commerce website that is easy to use and that has a clean layout whilst also sticking to the theme of the site which is homemade jewellery.  
+
+### Colours
+
+The colour palette for this website was created using [Coolors](https://coolors.co/fff7ad-ffa9f9-000000-cf4a72). The colours that where chosen complement each other while also having bright tones that complement the company's logo and the demographic of the artist making the homemade jewellery. Below you can see the colours that where used throughout the design of this website.
+
+<img src="../docs/readme_images/coolors.png">
+
+### Typography 
+
+The fonts for the site where imported from Google fonts. For the headings [Madimi One](https://fonts.google.com/specimen/Madimi+One) was used. This font was chosen as it fit the aesthetic of the site, it has a homemade feel to it and complemented other design features. The font also has a second font of Sans-Serif set in case the chosen font dose not work on the users browser.  
+
 
 
 
