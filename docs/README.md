@@ -158,6 +158,25 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 <img src="../docs/readme_images/logout.png">
 
+### Products
+
+* The All products link in the main navigation bar will display responsive cards with a clickable picture of the product, the products name and price.
+* When the picture is clicked it navigates the user to the product detail page. 
+
+<img src="../docs/readme_images/products.png">
+
+### Product detail
+
+* The product detail page contains a clickable image, which will open an enlarged version of the image in a new tab.
+* The product name is displayed with a product description underneath.
+* An average star rating from reviews left by users is displayed.
+* The price and a quantity selector is evident. The quantity selector will only allow input form 1 to 50.
+* Two call to action buttons follow this one for keep shopping and another to add the item to the bag. Once add to bag is selected it will add the quantity of the item chosen in the quantity selector to the users bag.
+
+<img src="../docs/readme_images/product-detail.png">
+
+
+
 
 
 
