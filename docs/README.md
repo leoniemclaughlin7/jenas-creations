@@ -36,7 +36,33 @@ The entity relationship diagram for this application was generated from Django. 
 
 <img src="../docs/readme_images/erd.png">
 
+## Wireframes
 
+Wireframes were produced for the home, products, product detail, shopping bag, checkout and checkout success pages. These wireframes where used for reference when building the site, some aspects of the wireframes have changed as the website was being produced.
+
+### Home
+
+<img src="../docs/readme_images/wireframe-home.png">
+
+### Products
+
+<img src="../docs/readme_images/wireframe-products.png">
+
+### Product Detail
+
+<img src="../docs/readme_images/wireframe-product-detail.png">
+
+### Shopping Bag
+
+<img src="../docs/readme_images/wireframe-shopping-bag.png">
+
+### Checkout
+
+<img src="../docs/readme_images/wireframe-checkout.png">
+
+### Checkout Success 
+
+<img src="../docs/readme_images/wireframe-checkout-success.png">
 
 
 
