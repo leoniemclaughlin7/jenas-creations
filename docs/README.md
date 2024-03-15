@@ -115,6 +115,16 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 <img src="../docs/readme_images/nav-bar.png">
 
+### Hero image and text overlay
+
+* The hero image contains the logo for Jenas Creations as well as a picture of the artist who makes the homemade jewellery. This gives a personal touch to the site. 
+* Front and centre is a description of what the site contains 'Homemade Jewellery' and Two call to action buttons. A shop now button and a custom order button. 
+* If the user has a custom order in their cart then only the shop now button will be displayed to the user.
+
+<img src="../docs/readme_images/hero-image.png">
+
+
+
 
 
 
