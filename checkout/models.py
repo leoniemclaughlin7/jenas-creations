@@ -4,6 +4,7 @@ from django_countries.fields import CountryField
 from custom_order.models import CustomOrder
 from products.models import Product
 from profiles.models import UserProfile
+from django.conf import settings
 import uuid
 
 
@@ -21,6 +22,7 @@ class Order(models.Model):
     country = CountryField(blank_label='Country *', null=False, blank=False) 
     postcode = models.CharField(max_length=20, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
@@ -35,7 +37,9 @@ class Order(models.Model):
         """
         Update grand total each time a lineitem is added.
         """
-        self.grand_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
 
