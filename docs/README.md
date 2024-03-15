@@ -123,6 +123,24 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 <img src="../docs/readme_images/hero-image.png">
 
+### About us
+
+* An about us section is evident on the home page, this gives the user some additional information about the creator and products available at Jenas Creations. 
+
+<img src="../docs/readme_images/about-us.png">
+
+### Register an account
+
+* Users can sign up to Jenas Creations using the register page.
+* If a user signs up they can leave a review on a product with edit and delete functionality, save their delivery information, view their profile where they can change their default delivery information and see their order history.
+* In order to register the user must fill out a form that includes their username, an email address and a password.
+* If a user tries to sign up with an email already in use they will be informed of this and asked to sign in.  
+
+<img src="../docs/readme_images/register.png">
+
+* The user will have to confirm their email address in order to sign up for an account.
+
+<img src="../docs/readme_images/email-verification.png">
 
 
 
