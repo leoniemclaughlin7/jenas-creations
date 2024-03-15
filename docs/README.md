@@ -100,7 +100,20 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 * <b>CSS</b> - Custom CSS was created to aid with the styling of Jenas Creations.
 * <b>JavaScript</b> - Custom JavaScript was used in the development of this site.
 
+# Features
 
+## Existing features
+
+### Navigation bar
+* The navigation bar is present on all pages of this site.
+* It contains Two sections the main navigation and a category navigation.
+* In the main navigation there is a clickable logo titled Jenas Creations, which navigates to the home page when clicked.
+* The clickable logo is fallowed by a link to All Products, followed by a dropdown menu titled Filter By, which allows the user to filter by price low to high or high to low. The final link in this section is a dropdown titled My Account. When the user is logged out the options are  Register and Login. When the user is logged in the dropdown options are Profile and Logout respectively. If admin is logged in to the site this dropdown also contains a link to the Admin Area.
+* To the right hand side of the main navigation bar there is a search input box. This search box will allow users to search the products on the site for keywords. It searches the product name and description.  
+* The last element in the main navigation bar is the users shopping cart. When items are added to the cart the price is displayed to the shopper.
+* The category navigations contains links to the Four categories of products available on the site. When the user is browsing a certain category the category is highlighted in a dark pink colour to inform the user that they are browsing that category. 
+
+<img src="../docs/readme_images/nav-bar.png">
 
 
 
