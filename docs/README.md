@@ -142,6 +142,22 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 <img src="../docs/readme_images/email-verification.png">
 
+### Sign in
+
+* A login page is available in the My Account dropdown in the main navigation.
+* A user must enter their username and password to sign in to Jenas Creations.
+* If preferred a user can also sign in using google.
+* There is a forgotten password link available to the user if needed.  
+
+<img src="../docs/readme_images/sign-in.png">
+
+### Logout
+
+* If the user wishes to logout of the site, they can do so by following the link in My Account section in the main navigation bar.
+* The user will be asked to confirm they would like to logout.
+
+<img src="../docs/readme_images/logout.png">
+
 
 
 
