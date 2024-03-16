@@ -1,0 +1,5 @@
+# Agile
+
+## Introduction
+ 
+Agile planning methodology was used to create the site Jenas Creations. GitHub projects was used to organise the development process into sprints, epics, Kanban boards and issues. The benefits of using agile methodology in this project include but are not limited to, having a plan in place, having a dedicated timeframe to achieve issues and overall organisation. I first started by creating Epics. These epics where created using GitHub milestones. Once the epic was created, detailed user stories where added which fit the criteria of the epic. Each user story had a detailed acceptance criteria and unit tasks associated with each issue. These issues where labelled using the MoSCoW technique. This project was completed over Two sprints of development. One sprint contained many epics and within this many issues.
