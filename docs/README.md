@@ -173,7 +173,15 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 * The price and a quantity selector is evident. The quantity selector will only allow input form 1 to 50.
 * Two call to action buttons follow this one for keep shopping and another to add the item to the bag. Once add to bag is selected it will add the quantity of the item chosen in the quantity selector to the users bag.
 
-<img src="../docs/readme_images/product-detail.png">
+<img src="../docs/readme_images/product-detail.png"> 
+
+### Reviews 
+
+* Reviews are visible in the product detail page under the details of the specific product for all users. 
+* Logged in users have the option to leave a review on a specific product.
+* Logged in users that own a review have the option to edit or delete their review. 
+
+<img src="../docs/readme_images/reviews.png">
 
 
 
