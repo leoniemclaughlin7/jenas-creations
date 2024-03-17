@@ -182,3 +182,10 @@ Sprint 2 of this project focused on the epics, custom product application, profi
 * [Display messages to user](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=55718193)
 * [View a miniature bag window when items are added to bag](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=55713966)
 * [View messages left by users as admin](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=55848835)
+
+## Conclusion
+
+In conclusion, using agile principles to develop this project had a number of  benefits. 
+It was easier to know which task I was working on and found myself getting less distracted as I was carrying out the work associated with the project. Having a dedicated timeframe for issues to be done helped me stay on track in terms of timeframe for the project. As a lot of thought went into the user stories I was able to have a better picture of the overall project before starting the work. This sped up production and definitely felt more organised. One thing I would do differently is instead of creating the user stories as needed I would create a proportion of them before carrying out any work. I feel this would give an even clearer picture of the overall project. As with the last project it was easy to see the benefits of collaboration, while developing with agile principles.  
+
+You can return to my README.md file [here.](../docs/README.md)
