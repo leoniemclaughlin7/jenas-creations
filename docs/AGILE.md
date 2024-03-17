@@ -116,3 +116,69 @@ Below is an example of how the user stories where structured for this project.
 A full list of the 39 user stories associated with this project can be found [here.](https://github.com/leoniemclaughlin7/jenas-creations/issues?q=is%3Aissue+is%3Aclosed)
 
 <img  src="../docs/agile_images/user-story.png">
+
+
+## Sprints
+
+This project was broken down into Two sprints of development of a duration of approximately Four weeks each. On reflection, I could have further broken down the user stories into more sprints for the size of this project and have them at Two week duration each. 
+
+<img  src="../docs/agile_images/sprints.png">
+
+### [Jenas Creations - sprint 1](https://github.com/users/leoniemclaughlin7/projects/7)
+
+Sprint One of this project focused on Five epics. Account registration, sorting and searching products, viewing products and navigation, shopping bag application and checkout application. 
+
+<img  src="../docs/agile_images/sprint-1.png">
+
+19 user stories completed during sprint 1 include:
+
+* [Create an account on the site](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=51503553)
+* [Login and logout](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=51503835)
+* [Email confirmation after registering an account](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=51504848)
+* [Sort products depending on price](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=52065807)
+* [Sign in with social accounts](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=51544558)
+* [Recover my password](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=51504063)
+* [View a list of products](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=51671778)
+*  [View individual product detail](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=51672316)
+*  [Choose category of product to view](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=51805044)
+*  [Search the products](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=52117411)
+*  [Create quantity selector on product detail page](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=52319878)
+* [Display categories individually on nav bar](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=52154105)
+* [See search results and number returned](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=52152336)
+* [Add products to the shopping bag app](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=52290341)
+* [Viewing the bag](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=52450029)
+* [Create the checkout app](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=52907076)
+* [Making secure payments](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=53021253)
+* [Confirm checkout](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=53144222)
+* [Sending confirmation emails after checkout](https://github.com/users/leoniemclaughlin7/projects/7/views/1?pane=issue&itemId=53145041)
+
+
+
+### [Jenas Creations - Sprint 2](https://github.com/users/leoniemclaughlin7/projects/9)
+
+Sprint 2 of this project focused on the epics, custom product application, profile application, admin product management, contact application and review products application.
+
+<img  src="../docs/agile_images/sprint-2.png">
+
+20 user stories completed during stint 2 include:
+
+* [Save delivery information](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=53634984)
+* [Save and view order history](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54030068)
+* [Add products via product management](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54064515)
+* [Update quantity of custom order](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54663963)
+* [Delete custom order from bag](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54693752)
+* [Edit products](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54285518)
+* [Delete products](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54289357)
+* [Review a product](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54311244)
+* [Edit reviews](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54379245)
+* [Delete review](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54389901)
+* [Add preferences for custom order](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54391209)
+* [Add custom order to bag](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54397553)
+* [Checkout custom order](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54922483)
+* [Contact admin of the site](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=55130071)
+* [Add more than on custom order to bag](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=54950155)
+* [See average rating in products](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=55469370)
+* [Show the delivery costs](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=55702163)
+* [Display messages to user](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=55718193)
+* [View a miniature bag window when items are added to bag](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=55713966)
+* [View messages left by users as admin](https://github.com/users/leoniemclaughlin7/projects/9/views/1?pane=issue&itemId=55848835)
