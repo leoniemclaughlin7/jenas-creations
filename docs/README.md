@@ -216,6 +216,18 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 *  
 <img src="../docs/readme_images/checkout-success.png">
 
+### Profile 
+
+* The profile page houses the users default delivery information if they opted to save this when checking out. 
+* Users can update their information from this page by clicking the update information button. 
+
+<img src="../docs/readme_images/profile.png">
+
+* From the profile page users can also see their order history.
+* The order history includes the date, grand total, order number and items. The order number is clickable and brings the user to the checkout success page with the details of their order displayed. 
+
+<img src="../docs/readme_images/order-history.png">
+
 
 
 
