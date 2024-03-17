@@ -97,3 +97,22 @@ This epic resulted in users of the site having the ability to sort products by p
 This epic was associated with allowing users to create an account on the site. Users will be sent an email when the register for an account. Users can sign in using their google account and a forgotten password link is available to users. 
 
 <img src="../docs/agile_images/epic-account-registration.png">
+
+## User stories 
+
+A user story is an explanation of a software feature written from the perspective of the end user. Its purpose is to articulate how a software feature will provide value to the customer. User stories were created with the help of GitHub issues. Each user story contains:
+* Title - Short description of the user story. 
+* Description - As a **role** I can **capability** so that **received benefit**.
+* Acceptance criteria - A set of conditions that a feature must meet to be accepted by the user. 
+* Unit tasks - A break down of each task needed to complete user story. 
+* A MoSCoW label - To prioritise tasks. 
+* Assignee -  Who the user store is assigned too. 
+* Milestone - Which epic this user store is associated with.
+
+Below is an example of how the user stories where structured for this project.
+
+<br/>
+
+A full list of the 39 user stories associated with this project can be found [here.](https://github.com/leoniemclaughlin7/jenas-creations/issues?q=is%3Aissue+is%3Aclosed)
+
+<img  src="../docs/agile_images/user-story.png">
