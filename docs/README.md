@@ -229,6 +229,27 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 <img src="../docs/readme_images/order-history.png">
 
 
+### Admin area 
+
+* The admin area can only be accessed if a superuser is logged into the site. It is accessible through the My Account dropdown in the main navigation bar. 
+* Within the admin area superusers can add products to the store. 
+* In order to add a product admin must fill in a form with the fields category, name, description, price, image URL and image.
+* Form validation is in place for the price field.  
+
+<img src="../docs/readme_images/admin-add.png">
+
+* When admin is logged in options to edit or delete products is available in the main product page and within the product detail page. 
+
+<img src="../docs/readme_images/admin-products.png">
+
+<img src="../docs/readme_images/admin-product-detail.png">
+
+* Within the admin area, user queries are also displayed. 
+* These queries contain the name of the user, the date and time, an email for the user and the message. 
+
+<img src="../docs/readme_images/admin-messages.png">
+
+
 
 
 
