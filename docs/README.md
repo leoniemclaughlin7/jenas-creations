@@ -208,6 +208,14 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 <img src="../docs/readme_images/checkout-payment.png">
 
+### Checkout success
+
+* The checkout success page first thanks the user for their order. This is followed by order confirmation details, such as order number, date and confirmation of the email in which the email confirmation will be sent.
+* Under this section there is a summary of the order placed, keeping the user informed about what they have purchased. 
+* The final section is a confirmation of the shoppers delivery address.
+*  
+<img src="../docs/readme_images/checkout-success.png">
+
 
 
 
