@@ -9,3 +9,91 @@ Agile planning methodology was used to create the site Jenas Creations. GitHub p
 MoSCoW analysis helps developers understand which tasks to prioritise. It is a process by which labels are added to issues. These labels include 'Must-have', 'Should-have' and ' Wont-have'. In my project I tried to ensure 'Should-have' prioritised user stories was not more than 60% of total user stories. On reflection, I did not use 'Wont-have' labels and prioritised more 'Must-have' and 'Should-have' labels. In future projects i would consider using more 'Wont-have' labels to detail the work that wont be prioritised during development. The image below shows a portion of the issues associated with this project and their labels in place.
 
 <img src="../docs/agile_images/MoSCoW.png">
+
+## Epics
+
+An agile epic is a body of work that can be broken down into smaller segments. Ten epics where created for this project. These epics where created using GitHub Milestones and each user story that corresponded to the epic was linked to each epic. The amount of user stories in each epic was depended on the project but they range from One to Six user stories. 
+
+<img src="../docs/agile_images/epics.png">
+
+The Ten epics where:
+
+1. [Profile Application](https://github.com/leoniemclaughlin7/jenas-creations/milestone/6?closed=1)
+
+<br/>
+
+This epic was associated with the creation of a profile for the user. The users profile would house their default delivery information, which they can update and the users order history. 
+
+<img src="../docs/agile_images/epic-profile-application.png">
+
+2. [Custom Product Application](https://github.com/leoniemclaughlin7/jenas-creations/milestone/9?closed=1)
+
+<br/>
+
+This epic revolved around setting up the ability of customers to checkout a custom order on the site. Users will fill in a form which will determine the price of their custom order, they can then add the custom order to their bag and change the quantity if desired and finally checkout their custom order.  
+
+<img src="../docs/agile_images/epic-custom-product-application.png">
+
+3. [Contact Application](https://github.com/leoniemclaughlin7/jenas-creations/milestone/10?closed=1)
+
+<br/>
+
+This epic was associated with creating a form that the user can fill out in order to have any queries answered by admin of the site. 
+
+<img src="../docs/agile_images/epic-contact-application.png">
+
+4. [Review Products Application](https://github.com/leoniemclaughlin7/jenas-creations/milestone/8?closed=1)
+
+<br/>
+
+This epic was associated with giving the users the ability to leave reviews on products. Users would also be able to edit or delete a review they have left. 
+
+<img src="../docs/agile_images/epic-review-products-application.png">
+
+5. [Admin Product Management](https://github.com/leoniemclaughlin7/jenas-creations/milestone/7?closed=1)
+
+<br/>
+
+This epic revolved around creating a space for admin to add, edit or  delete products from the site. It also was associated with displaying the messages left by users to admin, including their email so as admin could respond to queries. 
+
+<img src="../docs/agile_images/epic-admin-product-management.png">
+
+6. [Shopping Bag Application](https://github.com/leoniemclaughlin7/jenas-creations/milestone/4?closed=1)
+
+<br/>
+
+This epic was associated with creating a shopping bag so as shoppers could add items to their bag before deciding to checkout. Within the shopping bag application shoppers could to decide to update the quantity of the item they selected or remove the item from their bag. 
+
+<img src="../docs/agile_images/epic-shopping-bag-application.png">
+
+7. [Viewing Products And Navigation](https://github.com/leoniemclaughlin7/jenas-creations/milestone/2?closed=1)
+
+<br/>
+
+This epic resulted in users of the site having the ability to browse products available and the creation of the main and category navigation bar with the features listed in the features section of the readme. 
+
+<img src="../docs/agile_images/epic-viewing-products-and-navigation.png">
+
+8. [Checkout Application](https://github.com/leoniemclaughlin7/jenas-creations/milestone/5?closed=1)
+
+<br/>
+
+This epic is associated with users of the site having the ability to checkout the items that they have added to their bag. Payment was handled via Stripe and webhooks where implemented in order to ensure the order was created correctly. Shoppers also receive email confirmation of their order. 
+
+<img src="../docs/agile_images/epic-checkout-application.png">
+
+9. [Sorting And Searching Products](https://github.com/leoniemclaughlin7/jenas-creations/milestone/3?closed=1)
+
+<br/>
+
+This epic resulted in users of the site having the ability to sort products by price, either low to high or high to low. Displayed categories that the shopper is browsing in the navigation bar. It also handled the ability to search the site for keywords that would be found in the product name or description. 
+
+<img src="../docs/agile_images/epic-sorting-and-searching-products.png">
+
+10. [Account Registration ](https://github.com/leoniemclaughlin7/jenas-creations/milestone/1?closed=1)
+
+<br/>
+
+This epic was associated with allowing users to create an account on the site. Users will be sent an email when the register for an account. Users can sign in using their google account and a forgotten password link is available to users. 
+
+<img src="../docs/agile_images/epic-account-registration.png">
