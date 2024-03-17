@@ -193,6 +193,21 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 <img src="../docs/readme_images/shopping-bag.png">
 
+### Checkout
+
+* The checkout page contains an order summary to the left and a checkout form on the right. 
+* The order summary displays which products the user would like to purchase as well as the order total, delivery and grand total for the order. 
+* The check out form first asks for details such as name, email and phone number. 
+* The second section of the checkout form asks users to confirm their delivery details. Users have the option to save their delivery details if they are logged into the site, if they are logged out a link to sign up is displayed and details that if the user signs in they can save their default delivery information. 
+
+<img src="../docs/readme_images/checkout.png">
+
+* As part of the checkout form discussed above there is a payment section, provided by Stripe.
+* Two call to action buttons are available under the payment input. These are adjust bag or complete order. 
+* The final section in the checkout page is a notification highlighted in red, to the user that their card will be charged x amount.
+
+<img src="../docs/readme_images/checkout-payment.png">
+
 
 
 
