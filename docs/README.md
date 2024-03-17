@@ -183,6 +183,16 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 <img src="../docs/readme_images/reviews.png">
 
+### Shopping bag
+
+* The shopping bag houses details of the item the user has added to their bag. 
+* The product image is evident or if its a custom order the category of product is displayed.
+* The product name is available as well as the individual price and the subtotal, which will change depending on the quantity selected.
+* There is a quantity selector with an update and remove button, which allows the user to update their quantity of the item or remove it from the bag.
+* In the bottom right of the screen the bag total, delivery cost and grand total is displayed to the user followed by Two buttons, keep shopping or secure checkout. 
+
+<img src="../docs/readme_images/shopping-bag.png">
+
 
 
 
