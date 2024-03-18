@@ -292,6 +292,26 @@ Jenas Creations was tested using manual testing methodology. A detailed overview
 
 [back to top](#jenas-creations)
 
+# known Bugs
+
+All known bugs have been fixed, below is a list of bugs encountered and how they have been fixed.
+
+|Bug  | Status | Solution  |
+|--|--|--|
+|Connecting social accounts would not work on local production| fixed| Resolved by deploying the site to Heroku and setting the environment variables in the admin panel.  
+|Reviews where not ordering most recent first| fixed| Resolved by using Django ```order-by``` query in the display reviews section of views.py in the product app.  
+|Reviews not posted under the specific product that they should of been related too| fixed| Resolved by using Django ```filter``` query to query for the specific ```product_id```
+|Reviews displaying all on one line and not fitting to the container| fixed |Resolved by using the CSS property ```overflow-wrap: break-word;```|
+|When querying the product id in the update bag and delete from bag views in the bag app I was getting a match type error | fixed |Resolved by converting the integer to a string. ```if product_id == str(1000):```|
+|The name field in the custom order form was not shown required when personalised was selected| fixed |Resolved by setting form validation in the clean method of models.py in the custom order app.|
+|In the custom order app the price needed to be set depending on certain conditions| fixed |Fixed by overriding the save method in models.py in custom order app to factor in the conditions that determine price.|
+|Footer was not fixed to the bottom of the page, where the content did not fit the page |fixed |Resolved using flex box by adding a container to the main content and giving it an attribute of ```flex: 1;``` |
+|Toasts where not displaying |fixed |I was using the incorrect JavaScript for the version of Bootstrap toasts that I was using. I corrected the JavaScript by following along with the Bootstrap documentation. |
+|The average of the the stars left by users in the review section was not displaying |fixed |Resolved by using aggregation to get the average of all the star ratings left by users.|
+|Review form not displaying |fixed |Resolved by moving the rendering of the review form into the product detail view as this was rendering the product_detail.html template.|
+
+
+
 
 
 
