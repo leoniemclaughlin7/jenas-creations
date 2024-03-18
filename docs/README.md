@@ -310,6 +310,71 @@ All known bugs have been fixed, below is a list of bugs encountered and how they
 |The average of the the stars left by users in the review section was not displaying |fixed |Resolved by using aggregation to get the average of all the star ratings left by users.|
 |Review form not displaying |fixed |Resolved by moving the rendering of the review form into the product detail view as this was rendering the product_detail.html template.|
 
+# Deployment 
+
+Setting up a basic Django project and deploying to Heroku.
+
+Step 1: Installing Django and supporting libraries.
+
+1. Install Django and gunicorn: ```pip3 install 'django<4' gunicorn```
+2. Install supporting libraries: ```pip3 install dj_database_url==0.5.0 psycopg2```
+3. Create requirements file: ```pip3 freeze --local > requirements.txt```
+4. Create project: ```django-admin startproject PROJ_NAME  .```
+5. Create app: ```python3 manage.py startapp APP_NAME```
+6. In settings.py file, add app to installed apps.
+7. In terminal, migrate changes: ```python3 manage.py migrate```
+8. Run server to test: ```python3 manage.py runserver```
+9. In settings.py file, paste hostname into ALLOWED_HOSTS.
+
+Step 2: Create a new external database on PostgreSQL from code institute.
+
+1. Go to [https://dbs.ci-dbs.net/](https://dbs.ci-dbs.net/)  
+2. Input your email (The same one as you use for the LMS) and click Submit.  
+3. Your Database will be created and the details emailed to you.
+4. Copy your database URL.
+
+Step 3: Deploying to Heroku.
+
+1. Create new Heroku App.
+2. Navigate to settings tab.
+3. Click "Reveal Config Vars".
+4.  Add a Config Var called DATABASE_URL (This is the URL you copied in step 2).
+5. Create an env.py file on top level directory.
+6. In env.py, ```import os``` and set environment variables: ```os.environ["DATABASE_URL"] = "Paste in PostgreSQL database URL"```
+7. Add in secret key: ```os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"```
+8. In heroku.com, add secret key to Config Vars.
+9. In settings.py, reference env.py:
+ ```
+import os 
+import dj_database_url 
+if os.path.isfile("env.py"): 
+import env
+```
+10. Remove the insecure secret key and replace: ```SECRET_KEY = os.environ.get('SECRET_KEY')```
+11. Comment out the old Database section.
+12. Add new Database section:
+```
+DATABASES = {
+
+'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+
+}
+```
+13. In terminal, make migrations: ```python3 manage.py migrate```
+14.  Add Heroku Hostname to ALLOWED_HOSTS: ```ALLOWED_HOSTS = ["PROJ_NAME.herokuapp.com", "YOUR_HOSTNAME"]```
+15. Create a Procfile on the top level directory.
+16. In Procfile, add code: ```web: gunicorn PROJ_NAME.wsgi``` 
+17. Add, Commit and push files to GitHub.
+18. In Heroku, navigate to the deploy tab.
+19. Select GitHub as the deployment method.
+20. Search for GitHub repository, click connect to link up the GitHub repository to our Heroku app.
+21. You can choose to either automatic deploy or manually deploy the app.
+22. Automatic deploy will build the app each time it is pushed to GitHub. To enable this choose the branch you would like to deploy and click ```Enable Automatic Deploys```. 
+23. To manually deploy the app click ```Deploy Branch```.
+24. To view the deployed app click ```Open app``` at the top of the page.
+
+[back to top](#jenas-creations)
+
 
 
 
