@@ -286,6 +286,23 @@ These include:
 5. More profile information. It would be nice to allow users to create more profile information such as a profile picture, change their password or email. 
 6. Free delivery threshold. As a future feature a fee delivery threshold could be added to reward users that are willing to spend a certain amount of money at Jenas creations.
 
+# E-commerce business model
+
+## Marketing
+
+### Email marketing
+
+Email marketing is a technique by which an email list is gathered via a subscription method. In this project Mailchip was chosen as the email marketing provider. The embedded Mailchimp subscription box in the footer of Jenas Creations is intended to entice users to sign up to the subscription service via their email. This is a beneficial marketing tool as email campaigns can then be sent to a list of people who have opted in. These email campaigns will include any special offers that are in place, any new products released and any sales that are running in the hopes that these email campaigns will entice new and returning consumers to purchase from the site. 
+
+<img src="../docs/readme_images/mailchimp.png">
+ 
+### Facebook business page
+
+Organic social media marketing will be of benefit to Jenas Creations. Facebook was chosen as the organic social media marketing method as it has the largest number of users and widest demographic. Benefits of social media marketing include driving traffic to the website, increase brand awareness, build relationships with consumers and generate leads. Social media marketing is a great tool for building the brand. This is an important aspect of marketing as consumers have brand loyalty and are more likely to buy from a brand that they recognise. Below is some screenshots of the business Facebook page that was created for Jenas Creations. 
+
+<img src="../docs/readme_images/facebook.png">
+<img src="../docs/readme_images/facebook-post.png">
+
 # Testing
 
 Jenas Creations was tested using manual testing methodology. A detailed overview of the testing process is available [here.](../docs/TESTING.md)
