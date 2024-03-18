@@ -286,6 +286,13 @@ These include:
 5. More profile information. It would be nice to allow users to create more profile information such as a profile picture, change their password or email. 
 6. Free delivery threshold. As a future feature a fee delivery threshold could be added to reward users that are willing to spend a certain amount of money at Jenas creations.
 
+# Testing
+
+Jenas Creations was tested using manual testing methodology. A detailed overview of the testing process is available [here.](../docs/TESTING.md)
+
+[back to top](#jenas-creations)
+
+
 
 
 
