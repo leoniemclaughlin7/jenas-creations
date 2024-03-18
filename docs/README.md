@@ -213,7 +213,7 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 * The checkout success page first thanks the user for their order. This is followed by order confirmation details, such as order number, date and confirmation of the email in which the email confirmation will be sent.
 * Under this section there is a summary of the order placed, keeping the user informed about what they have purchased. 
 * The final section is a confirmation of the shoppers delivery address.
-*  
+
 <img src="../docs/readme_images/checkout-success.png">
 
 ### Profile 
@@ -272,6 +272,20 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 * The add to bag toast shows a summary of the users bag and a link to secure checkout. 
  
 <img src="../docs/readme_images/toasts.png">
+
+## Future features
+
+There are a number of future features which could be implemented as part of this project.
+
+These include:
+
+1. The ability to checkout more than one custom order at a time. This feature was planned, however due to time constraints was not executed. It would be advantageous to allow users to checkout more than one custom order on a given session. 
+2. Sign in using more social accounts. Currently users can sign in with their google account, however it would be nice to allow sign in via Facebook or Instagram. This would give the user more options for sign in and make the sign in process easier for the user. 
+3. A wish list. As a nice to have, a wish list would allow users to add items to their list which they can checkout at a later date. This would improve the overall usability of the site and add nice additional functionality.  
+4. The ability to like products. As a future feature having the ability of the user to like or favourite products would be a nice addition to have, as it adds a more personal touch to the site. 
+5. More profile information. It would be nice to allow users to create more profile information such as a profile picture, change their password or email. 
+6. Free delivery threshold. As a future feature a fee delivery threshold could be added to reward users that are willing to spend a certain amount of money at Jenas creations.
+
 
 
 
