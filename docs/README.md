@@ -249,6 +249,13 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 <img src="../docs/readme_images/admin-messages.png">
 
+### Footer 
+
+* The footer is evident on all pages of the site.
+* The footer contains copyright information, links to the Facebook and Instagram page, a contact us link and a subscription box via Mailchimp for email marketing purposes.
+
+<img src="../docs/readme_images/footer.png">
+
 
 
 
