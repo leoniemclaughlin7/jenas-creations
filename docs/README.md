@@ -256,6 +256,23 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 <img src="../docs/readme_images/footer.png">
 
+### Contact us
+
+* The contact us link in the footer is clickable and brings the user to a contact form. 
+* Information such as name, email address and message is required to fill in this form.
+* The email field in this form is validated and expects an email, a message will be displayed to the user if they do not enter an email.  
+* Once submitted a toast message pops up to inform the user that they will get a response via email. 
+
+<img src="../docs/readme_images/contact-us.png">
+
+### Toast messages 
+
+* This site uses toasts to keep the user informed. 
+* A toast message will pop up in the right corner anytime a user carries out an action on the site such as but not limited to, login, leaving a review or adding an item to their bag.
+* The add to bag toast shows a summary of the users bag and a link to secure checkout. 
+ 
+<img src="../docs/readme_images/toasts.png">
+
 
 
 
