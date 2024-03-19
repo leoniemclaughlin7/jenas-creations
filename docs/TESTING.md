@@ -38,8 +38,16 @@
 |Profile link |When clicked it will direct the user to their profile |Clicked the Profile link on the nav bar| pass
 |Logout link |When clicked it will direct the user to the logout page |Clicked the Logout link on the nav bar| pass
 
-### Superuser navigation bar 
+### Superuser navigation bar
+
 |Feature  | Expect  | Action | Result |
 |--|--|--|--|
 |My Account dropdown link |When logged in as the superuser the My Account dropdown will show Admin Area, Profile and Logout when clicked |Clicked the My Account link on the nav bar| pass
 |Admin Area link |When clicked it will direct the superuser to the admin area |Clicked the Admin Area link on the nav bar| pass
+
+### Home page
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Shop Now button |When clicked it will direct the user to a list of all products |Clicked the Shop Now button| pass
+|Custom Order button |When clicked it will direct the user to the custom order page |Clicked the Custom Order button| pass
