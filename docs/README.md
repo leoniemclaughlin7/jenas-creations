@@ -290,15 +290,49 @@ These include:
 
 ## Marketing
 
+### Search Engine Optimization (SEO)
+
+Search engine optimization is the process by which you optimise your web pages and content for better rankings in search engines. This is an important marketing strategy as you want your site to show up in Google searches. The implementation of SEO in this project will focus on Google as it has the largest market share of all the search engines. Good SEO for google will also result in good SEO for other search engines.  Some considerations for search engine ranking metrics is if the page was updated recently, how many times the searched for keyword appears on the page, if the keyword is in the page title, if the keyword has been bolded and if pictures have the keyword in their title or alt attribute. 
+
+#### Keywords 
+
+Keyword research was undertaken to determine which keywords would be important to potential customers of the site. A list of important, relevant topics, based on Jenas Creations was compiled.  These relevant topics where then further broken down with some possible keyword ideas. Of all the keywords generated the most relevant and authoritative where chosen.  A mixture of short-tail and long-tail keywords where used in this project. 
+
+Short-tail keywords:
+
+* Homemade jewellery.
+* Homemade bracelets. 
+* Homemade necklaces.
+* Homemade gifts.
+* Homemade phone charms.
+* Homemade earrings. 
+
+Long-tail keywords:
+
+* Beautiful homemade gifts.
+* Buy homemade jewellery online.
+* Cheap homemade jewellery.
+* Buy customisable jewellery online.
+
+#### SEO implementations in HTML 
+
+Semantic HTML was used in this project. This was an important aspect as search engines put more weight on keywords in semantic HTML. It was also important to not stuff the website with keywords however still implement them within the site. An example of this is the h2 heading detailing homemade jewellery on the home page. Another aspect is that all the images on the website have an alt attribute with the product name and all images are named with SEO in mind. The products where named with SEO in mind with the category of product in the name as well as the base colours. In the product detail page this name is also within both h2 and strong tags. Rel attributes have been added to external links on the site, in particular within the footer, noopener has been added to the Facebook and Instagram links. This tells the search engines not to include these links when it looks at the search engine ranking.
+
+#### Sitemap.xml and robots.txt file
+
+* A sitemap.xml file that lists a pages important URLs. This file ensures that search engines will crawl every page on the site. It speeds up content discovery. The sitemap.xml file was generated using [XML-sitemaps](https://www.xml-sitemaps.com/).
+ 
+* A robots.txt file was created. This file shows that the creator acknowledges that search engines are allowed on your site and they they may have free access to it. Having a robots.txt file is a sign of quality to search engines and improves the SEO ranking.  
+
 ### Email marketing
 
 Email marketing is a technique by which an email list is gathered via a subscription method. In this project Mailchip was chosen as the email marketing provider. The embedded Mailchimp subscription box in the footer of Jenas Creations is intended to entice users to sign up to the subscription service via their email. This is a beneficial marketing tool as email campaigns can then be sent to a list of people who have opted in. These email campaigns will include any special offers that are in place, any new products released and any sales that are running in the hopes that these email campaigns will entice new and returning consumers to purchase from the site. 
 
 <img src="../docs/readme_images/mailchimp.png">
  
-### Facebook business page
+### Social media marketing
 
-Organic social media marketing will be of benefit to Jenas Creations. Facebook was chosen as the organic social media marketing method as it has the largest number of users and widest demographic. Benefits of social media marketing include driving traffic to the website, increase brand awareness, build relationships with consumers and generate leads. Social media marketing is a great tool for building the brand. This is an important aspect of marketing as consumers have brand loyalty and are more likely to buy from a brand that they recognise. Below is some screenshots of the business Facebook page that was created for Jenas Creations. 
+Organic social media marketing will be of benefit to Jenas Creations. Facebook was chosen as the organic social media marketing method as it has the largest number of users and widest demographic. Benefits of social media marketing include driving traffic to the website, increase brand awareness, build relationships with consumers and generate leads. Social media marketing is a great tool for building the brand. This is an important aspect of marketing as consumers have brand loyalty and are more likely to buy from a brand that they recognise. As the e-commerce site grows paid social media marketing may be adopted. This would be in the form of paid Facebook adds, which will boost the reach of the site to potential customers. Below is some screenshots of the business Facebook page that was created for Jenas Creations. 
 
 <img src="../docs/readme_images/facebook.png">
 <img src="../docs/readme_images/facebook-post.png">
