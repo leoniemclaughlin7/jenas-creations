@@ -322,7 +322,7 @@ Semantic HTML was used in this project. This was an important aspect as search e
 
 #### Sitemap.xml and robots.txt file
 
-* A sitemap.xml file that lists a pages important URLs. This file ensures that search engines will crawl every page on the site. It speeds up content discovery. The sitemap.xml file was generated using [XML-sitemaps](https://www.xml-sitemaps.com/).
+* A sitemap.xml file is a file that lists a pages important URLs. This file ensures that search engines will crawl every page on the site. It speeds up content discovery. The sitemap.xml file was generated using [XML-sitemaps](https://www.xml-sitemaps.com/).
  
 * A robots.txt file was created. This file shows that the creator acknowledges that search engines are allowed on your site and they they may have free access to it. Having a robots.txt file is a sign of quality to search engines and improves the SEO ranking.
 
