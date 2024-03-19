@@ -288,6 +288,8 @@ These include:
 
 # E-commerce business model
 
+Jenas Creations is a business to consumer (B2C) operation, meaning the site refers to commerce between a business and an individual consumer. Jenas Creations falls under the category of manufacturing or making. The site is a private label product model, meaning the business is in control of what goes into the product, how it is packaged and what the labels look like. An advantage of this type of product is that it is complementary to creating unique products. The rational behind developing the site is to showcase the unique jewellery that the artist makes and make this available to consumers. The user demographic and what a user expects from the site has been described above in the [User Experience Design](#user-experience-design) section.  
+
 ## Marketing
 
 ### Search Engine Optimization (SEO)
@@ -322,7 +324,11 @@ Semantic HTML was used in this project. This was an important aspect as search e
 
 * A sitemap.xml file that lists a pages important URLs. This file ensures that search engines will crawl every page on the site. It speeds up content discovery. The sitemap.xml file was generated using [XML-sitemaps](https://www.xml-sitemaps.com/).
  
-* A robots.txt file was created. This file shows that the creator acknowledges that search engines are allowed on your site and they they may have free access to it. Having a robots.txt file is a sign of quality to search engines and improves the SEO ranking.  
+* A robots.txt file was created. This file shows that the creator acknowledges that search engines are allowed on your site and they they may have free access to it. Having a robots.txt file is a sign of quality to search engines and improves the SEO ranking.
+
+#### Content
+
+The home page was chosen to evaluate what to include in the page content to ensure it is deemed a high quality search result and therefore improve the search engine ranking. A high quality search result provides useful well informed information to the user, this was achieved by adding an about us section to the home page to give the user more information about Jenas Creations. High quality sites also exhibit expertise, is authoritative and trustworthy. This is shown by being upfront about what the site is about, the main heading states 'Homemade Jewellery' showing the intent of the site to the user straight away. Using professional content, high quality media and having relevant links to other parts of the site will encourage users to keep exploring more content. Two important call to action buttons in the hero image are encouraging links for users to explore what the site has to offer.
 
 ### Email marketing
 
