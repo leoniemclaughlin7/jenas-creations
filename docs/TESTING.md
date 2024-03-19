@@ -51,3 +51,16 @@
 |--|--|--|--|
 |Shop Now button |When clicked it will direct the user to a list of all products |Clicked the Shop Now button| pass
 |Custom Order button |When clicked it will direct the user to the custom order page |Clicked the Custom Order button| pass
+
+### Products page
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Product image |When clicked it will direct the user to the product detail page |Clicked a product image| pass
+
+### Products page - superuser
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Edit link |When a superuser is logged in an edit link will be displayed under each product, when clicked it will bring the superuser to the edit product page| clicked edit link | pass
+|Delete link |When a superuser is logged in a delete link will be displayed under each product| Observed the delete link under each product | pass
