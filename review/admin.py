@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import Review
 
 
-
 class ReviewAdmin(admin.ModelAdmin):
     """
     Review admin set up, using list display
@@ -11,5 +10,6 @@ class ReviewAdmin(admin.ModelAdmin):
     """
     list_display = ('name', 'stars', 'created_on')
     list_filter = ('stars', 'created_on')
+
 
 admin.site.register(Review, ReviewAdmin)

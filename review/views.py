@@ -4,14 +4,16 @@ from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
+
 @login_required
 def edit_review(request, review_id):
-    """ 
-    Edit a review 
+    """
+    Edit a review
     """
     review = get_object_or_404(Review, pk=review_id)
     if str(request.user) != review.name:
-        messages.error(request, 'Request denied! You do not have authorisation to edit this review.')
+        messages.error(request, 'Request denied! You do not have '
+                       'authorisation to edit this review.')
         return redirect(reverse('home'))
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES, instance=review)
@@ -20,10 +22,12 @@ def edit_review(request, review_id):
             messages.success(request, 'Successfully updated review!')
             return redirect('product_detail', product_id=review.product.id)
         else:
-            messages.error(request, 'Failed to update review. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update review. Please ensure '
+                           'the form is valid.')
     else:
         form = ReviewForm(instance=review)
-        messages.info(request, f'You are editing a review posted by {review.name}')
+        messages.info(request, f'You are editing a review posted by '
+                      '{review.name}')
 
     context = {
         'form': form,
@@ -35,14 +39,14 @@ def edit_review(request, review_id):
 
 @login_required
 def delete_review(request, review_id):
-    """ 
-    Delete a review 
+    """
+    Delete a review
     """
     review = get_object_or_404(Review, pk=review_id)
     if str(request.user) != review.name:
-        messages.error(request, 'Request denied! You do not have authorisation to delete this review.')
+        messages.error(request, 'Request denied! You do not have '
+                       'authorisation to delete this review.')
         return redirect(reverse('home'))
     review.delete()
     messages.success(request, 'Review deleted!')
     return redirect('product_detail', product_id=review.product.id)
-    

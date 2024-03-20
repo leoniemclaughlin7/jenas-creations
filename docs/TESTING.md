@@ -349,5 +349,15 @@ urls.py
 views.py
 <img  src="../docs/testing_images/profile-views.png">  
 
-
-
+#### Review app
+ 
+admin.py
+<img  src="../docs/testing_images/review-admin.png">
+forms.py
+<img  src="../docs/testing_images/review-forms.png">
+models.py
+<img  src="../docs/testing_images/review-models.png">
+urls.py
+<img  src="../docs/testing_images/review-urls.png">
+views.py
+<img  src="../docs/testing_images/review-views.png">
