@@ -64,3 +64,42 @@
 |--|--|--|--|
 |Edit link |When a superuser is logged in an edit link will be displayed under each product, when clicked it will bring the superuser to the edit product page| clicked edit link | pass
 |Delete link |When a superuser is logged in a delete link will be displayed under each product| Observed the delete link under each product | pass
+
+### Product detail page
+ 
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Image clickable |When the image is clicked it will open in a new tab| Clicked image | pass
+|Quantity selector - increment |When the increment button is clicked the quantity increases| Clicked the increment button on the quantity selector | pass
+|Quantity selector - decrement |When the decrement button is clicked the quantity decreases| Clicked the decrement button on the quantity selector | pass
+|Quantity selector - decrement disabled |When the quantity is 1 the decrement button on the quantity selector is disabled | Clicked the decrement button on the quantity selector when at 1 | pass
+|Quantity selector - increment disabled |When the quantity is 50 the increment button on the quantity selector is disabled | Clicked the increment button on the quantity selector when at 50 | pass
+|Keep Shopping button |When clicked the Keep Shopping button will direct the user to the all products page | Clicked the Keep Shopping button | pass
+|Add to bag button |When clicked the Add to bag button will add the product to the users bag | Clicked the Add to bag button | pass
+|Add to bag - shopping bag icon |When an item is added to the bag the price will increase under the shopping bag icon | Added product to bag and observed the shopping bag icon | pass
+|Add to bag - toast |When an item is added to the bag a toast message will pop up detailing 'Product name has been added to your bag', the contents of the bag and a Go to Secure Checkout button | Added product to bag and observed the toast message | pass
+|Secure Checkout button - toast |When the Go to Secure Checkout button is clicked it will direct the user to the shopping bag page| Clicked the Go to Secure Checkout button in the toast message | pass
+|Increase quantity - toast message |When an item is added to the bag that is already in the bag the toast message will detail 'Updated product name to quantity x'| Add item to bag that is already in bag and observed the toast message | pass
+|Reviews |Product reviews will be displayed below the product details| Observe the reviews section | pass
+
+### Product detail - logged in user
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Leave a review |When user is logged in they can leave a review on a product | Review a product and clicked submit | pass
+|Leave a review -  form validation |If a users submits a review with a required field left blank a message will detail 'Please fill in this field' | Leave message blank and clicked submit | pass
+|Edit a review link |When user is logged in and they are the owner of the review they can edit the review. Clicking the edit link will open the edit review page | Clicked the edit link | pass 
+|Edit a review - toast |When user is editing a review an information toast will pop up detailing 'You are editing a review posted by user' | Clicked the edit link and observed the toast message | pass 
+|Editing a review |When on the edit review page the form should be prefilled with pervious review and can be updated when update is clicked| Clicked update on the edit review page | pass 
+|Editing a review - success toast |When the review has been edited a success message will detail 'Successfully updated review'| Clicked update on the edit review page and observe toast message | pass
+|Delete a review link |When user is logged in and they are the owner of the review they can delete the review. Clicking the delete link will remove the review | Clicked the delete link | pass 
+|Delete a review - success toast |When the review has been deleted a success message will detail 'Review deleted!'| Clicked delete review and observe toast message | pass
+|Average star rating |When a review is posted the star rating will contribute to the average rating displayed in the product detail| Add reviews and checked average star rating in product detail | pass
+
+### Product detail  - superuser
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Edit link |When a superuser is logged in an edit link will be displayed under the price in the product detail page | Observed edit link | pass
+|Delete link |When a superuser is logged in a delete link will be displayed under the price in the product detail page | Observed the delete link | pass
+
