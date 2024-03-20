@@ -17,8 +17,8 @@ class OrderForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field. Inspired by 
-        Boutique Ado walkthrough. 
+        labels and set autofocus on first field. Inspired by
+        Boutique Ado walkthrough.
         """
         super().__init__(*args, **kwargs)
         placeholders = {
@@ -42,4 +42,3 @@ class OrderForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
-            

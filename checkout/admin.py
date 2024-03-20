@@ -15,7 +15,7 @@ class OrderAdmin(admin.ModelAdmin):
     Order admin set up, using list display
     so as admin panel will be ordered by the display
     below and ordering so admin can easily find
-    orders.  
+    orders.
     """
     inlines = (OrderLineItemAdminInline,)
 
@@ -27,5 +27,5 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ('-date',)
 
-admin.site.register(Order, OrderAdmin)
 
+admin.site.register(Order, OrderAdmin)

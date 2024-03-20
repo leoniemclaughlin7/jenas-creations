@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse
+from django.shortcuts import get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -18,7 +19,7 @@ import json
 @require_POST
 def cache_checkout_data(request):
     """
-    Handles a post request to modify a stripe payment intent. If 
+    Handles a post request to modify a stripe payment intent. If
     successful it returns a status 200 or if it fails a status 400
     with an error message.
     """
@@ -74,21 +75,21 @@ def checkout(request):
                             quantity = bag['quantity']
                         else:
                             quantity = 1
-                        custom_order = CustomOrder.objects.get(id=custom_order_id)
+                        custom_order = CustomOrder.objects.get(
+                                       id=custom_order_id)
                         order_line_item = OrderLineItem(
                             order=order,
                             custom_order=custom_order,
-                            quantity = quantity
+                            quantity=quantity
                         )
                         order_line_item.save()
                     except CustomOrder.DoesNotExist:
                         messages.error(request, (
-                        "The custom order in your bag wasn't found in our database. "
-                        "Please call us for assistance!")
-                    )
+                            "The custom order in your bag wasn't found "
+                            "in our database. Please call us for assistance!")
+                        )
                         order.delete()
                         return redirect(reverse('view_bag'))
-
 
                 try:
                     if item_id == 'custom_order' or item_id == 'quantity':
@@ -103,21 +104,23 @@ def checkout(request):
                         order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
-                        "Please call us for assistance!")
+                        "One of the products in your bag wasn't found "
+                        "in our database. Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                            args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your bag "
+                           "at the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -156,8 +159,8 @@ def checkout(request):
     }
 
     return render(request, template, context)
-  
-    
+
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
@@ -169,7 +172,7 @@ def checkout_success(request, order_number):
         profile = UserProfile.objects.get(user=request.user)
         order.user_profile = profile
         order.save()
-        
+
         if save_info:
             profile_data = {
                 'default_full_name': order.full_name,
@@ -198,4 +201,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-    

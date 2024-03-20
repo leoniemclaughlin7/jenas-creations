@@ -263,3 +263,22 @@ urls.py
 <img  src="../docs/testing_images/bag-urls.png">
 views.py
 <img  src="../docs/testing_images/bag-views.png">
+
+#### Checkout app
+
+admin.py
+<img  src="../docs/testing_images/checkout-admin.png">
+forms.py
+<img  src="../docs/testing_images/checkout-forms.png">
+models.py
+<img  src="../docs/testing_images/checkout-models.png">
+signals.py
+<img  src="../docs/testing_images/checkout-signals.png">
+urls.py
+<img  src="../docs/testing_images/checkout-urls.png">
+views.py
+<img  src="../docs/testing_images/checkout-views.png">
+webhook_handler.py 
+<img  src="../docs/testing_images/checkout-webhook-handler.png">
+webhooks.py 
+<img  src="../docs/testing_images/checkout-webhooks.png">
