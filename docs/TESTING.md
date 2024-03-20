@@ -309,3 +309,9 @@ urls.py
 views.py
 <img  src="../docs/testing_images/custom-order-views.png">
 
+#### home app
+ 
+urls.py
+<img  src="../docs/testing_images/home-urls.png">
+views.py
+<img  src="../docs/testing_images/home-views.png">
