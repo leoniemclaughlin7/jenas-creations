@@ -103,3 +103,15 @@
 |Edit link |When a superuser is logged in an edit link will be displayed under the price in the product detail page | Observed edit link | pass
 |Delete link |When a superuser is logged in a delete link will be displayed under the price in the product detail page | Observed the delete link | pass
 
+### Custom order page
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Custom order form |When form is filled in correctly and Place custom order is clicked a confirmation page will detail the price for the custom order | Filled in form and clicked Place custom order button | pass
+|Custom order price |The price for the custom order will depend on the selections made by the user | Added different selections in the custom order form and checked the price differing | pass
+|Custom order form - blank input validation |If Place custom order button is clicked with required fields left blank then a pop up will detail 'Please fill in this field' | Clicked Place custom order button and left colour scheme blank | pass
+|Custom order form - Name validation |If Place custom order button is clicked with Personalised checked and the name field left blank then an error message will detail 'A name is required for personalised items' | Clicked Place custom order button and left name blank | pass
+|All products button |When clicked the all products button will direct the user to the products page  | Clicked the all products button | pass
+|Add to Bag button |When clicked the Add to Bag button will add the custom order to the bag and navigate to the shopping bag page | Clicked the Add to Bag button | pass
+|Add to bag - toast |When a custom order is added to the bag a toast message will pop up detailing 'Custom order has been added to your bag', the contents of the bag and a Go to Secure Checkout button | Added custom order to bag and observed the toast message | pass
+|Keep Shopping button |When clicked the Keep Shopping button will direct the user to the products page | Clicked the Keep Shopping button | pass
