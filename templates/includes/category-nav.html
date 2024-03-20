@@ -1,3 +1,4 @@
+<!--Category navigation bar-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid custom-nav">
   <div class="row">
     <div class="col">
@@ -7,8 +8,8 @@
           <a class="nav-link" href="{% url 'products' %}?category=Bracelets">Bracelets</a>
         </li>
         <li
-          class="nav-item {% for category in current_categories %}{% if category.name == 'Phone Charms' %}active{% endif %}{% endfor %}">
-          <a class="nav-link" href="{% url 'products' %}?category=Phone Charms">Phone Charms</a>
+          class="nav-item {% for category in current_categories %}{% if category.name == 'PhoneCharms' %}active{% endif %}{% endfor %}">
+          <a class="nav-link" href="{% url 'products' %}?category=PhoneCharms">Phone Charms</a>
         </li>
         <li
           class="nav-item {% for category in current_categories %}{% if category.name == 'Earrings' %}active{% endif %}{% endfor %}">

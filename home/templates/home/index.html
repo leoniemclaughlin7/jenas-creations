@@ -17,13 +17,11 @@
                         </h2>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button class="rounded shop-now">
-                            <a href="{% url 'products' %}" class="btn btn-sm text-decoration-none">Shop Now</a>
-                        </button>
+                        <a href="{% url 'products' %}" class="btn btn-sm text-decoration-none rounded shop-now">Shop
+                            Now</a>
                         {% if show_custom_order_link %}
-                        <button class="rounded custom-order">
-                            <a href="{% url 'custom_order' %}" class="btn btn-sm text-decoration-none">Custom Order</a>
-                        </button>
+                        <a href="{% url 'custom_order' %}"
+                            class="btn btn-sm text-decoration-none rounded custom-order">Custom Order</a>
                         {% endif %}
                     </div>
                 </div>
