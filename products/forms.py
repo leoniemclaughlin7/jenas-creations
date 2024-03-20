@@ -11,7 +11,6 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
-
     def __init__(self, *args, **kwargs):
         """
         Gets all categories.

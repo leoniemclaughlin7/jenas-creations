@@ -325,4 +325,16 @@ urls.py
 views.py
 <img  src="../docs/testing_images/views.png">
 
+#### Products app
+ 
+admin.py
+<img  src="../docs/testing_images/products-admin.png">
+forms.py
+<img  src="../docs/testing_images/products-forms.png">
+models.py
+<img  src="../docs/testing_images/products-models.png">
+urls.py
+<img  src="../docs/testing_images/products-urls.png">
+views.py
+<img  src="../docs/testing_images/products-views.png">
 

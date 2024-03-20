@@ -6,7 +6,7 @@ class ProductAdmin(admin.ModelAdmin):
     """
     Product admin set up, using list display
     so as admin panel will be ordered by the display
-    below. 
+    below.
     """
     list_display = (
         'name',
@@ -14,5 +14,7 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'image',
     )
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category)
