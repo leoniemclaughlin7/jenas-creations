@@ -184,9 +184,18 @@
 |Delivery info |The users delivery information will be displayed on the checkout success page | Checkout an order an observe the delivery info section | pass
 
 ### Profile
- 
+
 |Feature  | Expect  | Action | Result |
 |--|--|--|--|
 |Update information button |When clicked the update information button will update the users default delivery information| Updated delivery information and clicked update information button | pass 
 |Order history |When a user is logged in and places an order they will be able to see their order history in the profile page| Placed an order and observed the order history| pass
 |Order number clickable |When an order number in the order history is clicked it will direct the user back to the checkout success page with an information toast stating that this is a past order confirmation | Clicked an order number in the order history| pass
+
+### Contact us
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Contact us form |When submitted with valid information the contact us form will leave a message for admin in the admin panel| Submit contact us form with valid information| pass
+|Contact us form - required inputs |When contact us form submitted with a required field left blank a pop up will detail 'Please fill in this field'| Submit contact us form with full name field left blank| pass
+|Contact us form - invalid email |When submitted with an invalid email a pop up will detail 'Please include an '@' in the email address'| Submit contact us form with invalid email| pass
+
