@@ -215,10 +215,18 @@
 |User messages |When user fills in contact us form the message will be displayed in the admin area| Observed user messages in admin area | pass
 
 ### Footer
- 
+
 |Feature  | Expect  | Action | Result |
 |--|--|--|--|
 |Facebook link |When the Facebook icon is clicked it will open the Facebook business page in a new tab | Clicked Facebook icon| pass
 |Instagram link |When the Instagram icon is clicked it will open Instagram in a new tab | Clicked Instagram icon| pass
 |Contact us link |When the contact us link is clicked it will direct users to the contact us page | Clicked contact us link| pass
 |Mailchimp subscription form |When email is added to Mailchimp it will add the users email to an email marketing service| Added email to Mailchimp form and checked Mailchimp to see if email is in subscriber list| pass
+
+### Logout
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Logout |When logout is selected in My Account dropdown in the navigation bar a messaged will appear confirming if the user would like to sign out | Clicked logout in the My Account dropdown navigation bar| pass
+|Sign out button |When sign out button is clicked the user will be signed out and directed to the home page | Clicked sign out button| pass
+|Logout - success toast |When signed out a success message will detail 'Successfully signed out' | Clicked sign out button| pass
