@@ -149,3 +149,11 @@
 |Feature  | Expect  | Action | Result |
 |--|--|--|--|
 |Save delivery information to my profile checkbox |When this checkbox is clicked it will save the users default delivery information | Checkout with this checkbox clicked and check users profile, observe default delivery information | pass 
+
+### Checkout success page
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Order thank you message |An order confirmation including where the confirmation email would be sent, the order number and the date of the order will be displayed on the checkout success page | Checkout an order an observe the thank you message | pass 
+|Your order |An order summary will be displayed in the checkout success page, to include the order, subtotal and grand total | Checkout an order an observe your order section | pass 
+|Delivery info |The users delivery information will be displayed on the checkout success page | Checkout an order an observe the delivery info section | pass
