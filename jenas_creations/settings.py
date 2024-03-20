@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-leoniemclau-jenascreati-jhniaapp65h.ws-eu110.gitpod.io', 'jenas-creations-ad878282c6a4.herokuapp.com']
+ALLOWED_HOSTS = ['8000-leoniemclau-jenascreati-jhniaapp65h.ws-eu110.gitpod.io',
+                 'jenas-creations-ad878282c6a4.herokuapp.com']
 
 
 # Application definition
@@ -81,7 +82,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'templates', 'allauth'), 
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,7 +125,6 @@ LOGIN_REDIRECT_URL = '/'
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 
-
 WSGI_APPLICATION = 'jenas_creations.wsgi.application'
 
 
@@ -147,18 +147,18 @@ else:
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME':
+     'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'
+     },
+    {'NAME':
+     'django.contrib.auth.password_validation.MinimumLengthValidator'
+     },
+    {'NAME':
+     'django.contrib.auth.password_validation.CommonPasswordValidator'
+     },
+    {'NAME':
+     'django.contrib.auth.password_validation.NumericPasswordValidator'
+     },
 ]
 
 
@@ -206,7 +206,6 @@ if 'USE_AWS' in os.environ:
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
 
-
     # Override static URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
@@ -236,7 +235,7 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
-GRAPH_MODELS ={
-'all_applications': True,
-'graph_models': True,
+GRAPH_MODELS = {
+    'all_applications': True,
+    'graph_models': True,
 }

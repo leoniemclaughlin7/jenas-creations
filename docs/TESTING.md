@@ -315,3 +315,14 @@ urls.py
 <img  src="../docs/testing_images/home-urls.png">
 views.py
 <img  src="../docs/testing_images/home-views.png">
+
+#### Jenas Creations
+
+settings.py
+<img  src="../docs/testing_images/settings.png">
+urls.py
+<img  src="../docs/testing_images/urls.png">
+views.py
+<img  src="../docs/testing_images/views.png">
+
+
