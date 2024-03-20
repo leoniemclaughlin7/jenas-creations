@@ -2,6 +2,18 @@
 
 ## Manual testing
 
+### Register
+ 
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Sign in link |When clicked the sign in link will direct the user to the sign in page | Clicked the sign in link | pass 
+|Sign up form |When filled in correctly the sign up form will register an account for the user and direct to a verify your e-mail address page | Filled in form and clicked sign up button | pass 
+|Sign up - information toast |When sign up form is submitted an information toast message will detail 'Confirmation email sent to users email' | Submitted sign up form | pass 
+|Sign up - email |When sign up form is submitted with an email that is already registered then a pop up will detail 'A user is already registered with this e-mail address.' | Submitted sign up form with an email that is already registered | pass
+|Sign up - email miss match |When sign up form is submitted with emails that don't match then a pop up will detail 'You must type the same email each time.' | Submitted sign up form with emails that do not match | pass 
+|Sign up - username |When sign up form is submitted with a username that is already registered then a pop up will detail 'A user with that username already exists.' | Submitted sign up form with a username that is already registered | pass 
+|Sign up - password |When sign up form is submitted with passwords that don't match then a pop up will detail 'You must type the same password each time.' | Submitted sign up form with passwords that do not match | pass 
+
 ###  Main navigation Bar
 
 |Feature  | Expect  | Action | Result |
