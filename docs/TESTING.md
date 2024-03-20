@@ -282,3 +282,16 @@ webhook_handler.py
 <img  src="../docs/testing_images/checkout-webhook-handler.png">
 webhooks.py 
 <img  src="../docs/testing_images/checkout-webhooks.png">
+
+#### Contact app
+ 
+admin.py
+<img  src="../docs/testing_images/contact-admin.png">
+forms.py
+<img  src="../docs/testing_images/contact-forms.png">
+models.py
+<img  src="../docs/testing_images/contact-models.png">
+urls.py
+<img  src="../docs/testing_images/contact-urls.png">
+views.py
+<img  src="../docs/testing_images/contact-views.png">

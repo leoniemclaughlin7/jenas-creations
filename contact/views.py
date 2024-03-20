@@ -10,7 +10,8 @@ def contact(request):
         contact = ContactForm(request.POST)
         if contact.is_valid():
             contact.save()
-            messages.success(request, 'Your message has been sent, please expect a response via email.')
+            messages.success(request, 'Your message has been sent, please '
+                             'expect a response via email.')
             contact = ContactForm()
     else:
         contact = ContactForm()
