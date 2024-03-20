@@ -230,3 +230,25 @@
 |Logout |When logout is selected in My Account dropdown in the navigation bar a messaged will appear confirming if the user would like to sign out | Clicked logout in the My Account dropdown navigation bar| pass
 |Sign out button |When sign out button is clicked the user will be signed out and directed to the home page | Clicked sign out button| pass
 |Logout - success toast |When signed out a success message will detail 'Successfully signed out' | Clicked sign out button| pass
+
+## Validator Testing
+
+### HTML
+
+No errors were returned when all HTML pages where passed through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjenas-creations-ad878282c6a4.herokuapp.com%2F#l101c14)
+
+<img  src="../docs/testing_images/HTML.png">
+
+### CSS
+
+No errors were returned when the CSS was passed through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
+
+<img  src="../docs/testing_images/CSS.png">
+
+### Lighthouse Testing
+
+Lighthouse was run to audit performance, accessibility, best practices and SEO for the entire site.
+
+<img  src="../docs/testing_images/lighthouse.png">
+
+
