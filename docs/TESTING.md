@@ -199,3 +199,17 @@
 |Contact us form - required inputs |When contact us form submitted with a required field left blank a pop up will detail 'Please fill in this field'| Submit contact us form with full name field left blank| pass
 |Contact us form - invalid email |When submitted with an invalid email a pop up will detail 'Please include an '@' in the email address'| Submit contact us form with invalid email| pass
 
+### Admin area
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Product management - Add a product |When add a product form is filled out correctly and Add product button is clicked a new product will be added to the site |Filled in add product form and clicked add product| pass
+|Add a product - required inputs |When add a product form is submitted with a required field left blank a pop up will detail 'Pease fill in this field' |Filled in add product form and left description blank| pass
+|Add a product - price |When add a product form is submitted with invalid data in the price field a message will detail 'Ensure that there are no more than 4 digits before the decimal point.' |Add price of 125635 in the add product form| pass
+|Add a product - URL |When add a product form is submitted with invalid URL a message will detail 'Please enter a URL' |Add invalid URL in the add product form| pass
+|Cancel button |When cancel button is clicked it will direct the superuser to the products page |Clicked cancel button| pass
+|Edit product |When edit link is clicked it will open a prefilled form with the products details, when edit product button is clicked this will update the details of the product and return superuser to the product detail page  |Updated the edit a product form and clicked edit product| pass
+|Edit product - success toast |When product is edited a success toast will detail 'Successfully updated product'| Edited a product | pass
+|Delete product |When the delete link is clicked it will remove the product from the site| Clicked delete link | pass
+|Delete product - success toast |When product is deleted a success toast will detail 'Deleted product'| Delete a product | pass
+|User messages |When user fills in contact us form the message will be displayed in the admin area| Observed user messages in admin area | pass
