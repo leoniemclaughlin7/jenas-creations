@@ -15,7 +15,6 @@ class CustomOrderForm(forms.ModelForm):
                   'charm', 'personalised',
                   'name', 'additional_details')
 
-
     def __init__(self, *args, **kwargs):
         """
         Gets all the categories and sets autofocus on category field.

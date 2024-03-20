@@ -295,3 +295,17 @@ urls.py
 <img  src="../docs/testing_images/contact-urls.png">
 views.py
 <img  src="../docs/testing_images/contact-views.png">
+
+#### Custom-order app
+ 
+admin.py
+<img  src="../docs/testing_images/custom-order-admin.png">
+forms.py
+<img  src="../docs/testing_images/custom-order-forms.png">
+models.py
+<img  src="../docs/testing_images/custom-order-models.png">
+urls.py
+<img  src="../docs/testing_images/custom-order-urls.png">
+views.py
+<img  src="../docs/testing_images/custom-order-views.png">
+

@@ -5,8 +5,8 @@ from django.contrib import messages
 
 
 def custom_order(request):
-    """ 
-    A view to display custom_order form 
+    """
+    A view to display custom_order form
     """
     if request.method == 'POST':
         custom_form = CustomOrderForm(request.POST)
@@ -24,7 +24,7 @@ def custom_order(request):
 
     return render(request, 'custom_order/custom_order.html', context)
 
- 
+
 def custom_order_details(request, custom_order_id):
     """
     A view to display the price of the custom order to the customer.
@@ -40,8 +40,8 @@ def custom_order_details(request, custom_order_id):
 
 
 def add_custom_order_to_bag(request, custom_order_id):
-    """ 
-    Add custom order to the shopping bag 
+    """
+    Add custom order to the shopping bag
     """
     custom_order = CustomOrder.objects.get(pk=custom_order_id)
     bag = request.session.get('bag', {})
@@ -49,7 +49,7 @@ def add_custom_order_to_bag(request, custom_order_id):
     bag['custom_order'] = custom_order_id
     messages.success(
                 request, 'Added custom order to your bag.')
-   
+
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
@@ -65,7 +65,7 @@ def custom_order_update(request, custom_order_id, quantity):
             bag['quantity'] = quantity
             messages.success(
                 request, f'Updated custom order quantity to {quantity}')
-        
+
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
