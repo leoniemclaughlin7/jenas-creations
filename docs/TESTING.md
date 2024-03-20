@@ -213,3 +213,12 @@
 |Delete product |When the delete link is clicked it will remove the product from the site| Clicked delete link | pass
 |Delete product - success toast |When product is deleted a success toast will detail 'Deleted product'| Delete a product | pass
 |User messages |When user fills in contact us form the message will be displayed in the admin area| Observed user messages in admin area | pass
+
+### Footer
+ 
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Facebook link |When the Facebook icon is clicked it will open the Facebook business page in a new tab | Clicked Facebook icon| pass
+|Instagram link |When the Instagram icon is clicked it will open Instagram in a new tab | Clicked Instagram icon| pass
+|Contact us link |When the contact us link is clicked it will direct users to the contact us page | Clicked contact us link| pass
+|Mailchimp subscription form |When email is added to Mailchimp it will add the users email to an email marketing service| Added email to Mailchimp form and checked Mailchimp to see if email is in subscriber list| pass
