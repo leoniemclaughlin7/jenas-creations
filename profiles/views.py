@@ -6,9 +6,9 @@ from django.contrib.auth.decorators import login_required
 from checkout.models import Order
 
 
-@login_required 
+@login_required
 def profile(request):
-    """ 
+    """
     A view to get users profile. If request method is post save user
     profile form. Also returns all users orders with the most recent
     first.
@@ -21,15 +21,16 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Failed to update. Please ensure the form is valid.') 
-    else:   
+            messages.error(request, 'Failed to update. Please ensure the '
+                           'form is valid.')
+    else:
         form = UserProfileForm(instance=profile)
-        
+
     orders = profile.orders.all().order_by('-date')
 
     context = {
         'form': form,
-        'orders': orders, 
+        'orders': orders,
     }
 
     return render(request, 'profiles/profile.html', context)
@@ -52,4 +53,4 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
-    
+  

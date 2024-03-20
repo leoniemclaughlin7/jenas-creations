@@ -338,3 +338,16 @@ urls.py
 views.py
 <img  src="../docs/testing_images/products-views.png">
 
+#### Profile app
+
+forms.py
+<img  src="../docs/testing_images/profile-forms.png">
+models.py
+<img  src="../docs/testing_images/profile-models.png">
+urls.py
+<img  src="../docs/testing_images/profile-urls.png">
+views.py
+<img  src="../docs/testing_images/profile-views.png">  
+
+
+
