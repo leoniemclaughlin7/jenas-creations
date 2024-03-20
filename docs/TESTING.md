@@ -251,4 +251,15 @@ Lighthouse was run to audit performance, accessibility, best practices and SEO f
 
 <img  src="../docs/testing_images/lighthouse.png">
 
+### CI Python Linter
 
+All relevant Python files in this project where passed through the [CI Python Linter](https://pep8ci.herokuapp.com/#)
+
+#### Bag app
+
+contexts.py
+<img  src="../docs/testing_images/bag-context.png">
+urls.py
+<img  src="../docs/testing_images/bag-urls.png">
+views.py
+<img  src="../docs/testing_images/bag-views.png">
