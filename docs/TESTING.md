@@ -182,3 +182,11 @@
 |Order thank you message |An order confirmation including where the confirmation email would be sent, the order number and the date of the order will be displayed on the checkout success page | Checkout an order an observe the thank you message | pass 
 |Your order |An order summary will be displayed in the checkout success page, to include the order, subtotal and grand total | Checkout an order an observe your order section | pass 
 |Delivery info |The users delivery information will be displayed on the checkout success page | Checkout an order an observe the delivery info section | pass
+
+### Profile
+ 
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Update information button |When clicked the update information button will update the users default delivery information| Updated delivery information and clicked update information button | pass 
+|Order history |When a user is logged in and places an order they will be able to see their order history in the profile page| Placed an order and observed the order history| pass
+|Order number clickable |When an order number in the order history is clicked it will direct the user back to the checkout success page with an information toast stating that this is a past order confirmation | Clicked an order number in the order history| pass
