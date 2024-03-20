@@ -130,3 +130,22 @@
 |Keep Shopping button |When clicked the Keep Shopping button will direct the user to the products page | Clicked the Keep Shopping button | pass
 |Secure Checkout button |When clicked the Secure Checkout button will direct the user to the checkout page | Clicked the Secure Checkout button | pass
 
+### Checkout page
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Order Summary |On the checkout page the order summary should be displayed with the items that the user wants to checkout | Add different items to the bag and clicked Secure Checkout, check the order summary to make sure the items from the bag corresponds to the order summary | pass 
+|Order total, Delivery and Grand total |On the checkout page the order total, delivery and grand total should be displayed under the order summary | Add different items to the bag and clicked Secure Checkout, check the order total, delivery and grand total | pass 
+|Checkout form |When filled in correctly and Complete Order is clicked an order with the users items is created and user is navigated to the checkout success page | Fill in checkout form and click Complete Order | pass 
+|Checkout form - validation |If the form is submitted and a required field is left blank a pop up will detail 'Please fill in this field'| Submit checkout form with the email address field left blank | pass
+|Create an account link |Under the delivery details of the checkout form the user is asked to create an account to save their delivery information, when clicked it will navigate to the sign up page| Clicked create an account link | pass
+|Login link |Under the delivery details of the checkout form the user is asked to login to save their delivery information, when clicked it will navigate to the sign in page| Clicked login link | pass
+|Payment input |Entering an incorrect card number will result in an error message 'Your card number is invalid'| Entered 9999999999999999 in the payment input | pass
+|Checkout success - toast |After checking out products a checkout success message should be displayed containing the users order number and that a confirmation message is sent via email | Checked out order and observed success toast message | pass
+|Confirmation email |After checking out products an email is sent to the user confirming details of their order | Checked out order and check for received confirmation email | pass
+
+### Checkout page - logged in user 
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Save delivery information to my profile checkbox |When this checkbox is clicked it will save the users default delivery information | Checkout with this checkbox clicked and check users profile, observe default delivery information | pass 
