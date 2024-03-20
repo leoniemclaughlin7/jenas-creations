@@ -115,3 +115,18 @@
 |Add to Bag button |When clicked the Add to Bag button will add the custom order to the bag and navigate to the shopping bag page | Clicked the Add to Bag button | pass
 |Add to bag - toast |When a custom order is added to the bag a toast message will pop up detailing 'Custom order has been added to your bag', the contents of the bag and a Go to Secure Checkout button | Added custom order to bag and observed the toast message | pass
 |Keep Shopping button |When clicked the Keep Shopping button will direct the user to the products page | Clicked the Keep Shopping button | pass
+
+### Shopping bag page
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Quantity selector - increment |When the increment button is clicked the quantity increases for different products in the shopping bag| Clicked the increment button on the quantity selector of multiple items in the bag | pass
+|Quantity selector - decrement |When the decrement button is clicked the quantity decreases for different products in the shopping bag| Clicked the decrement button on the quantity selector of multiple items in the bag | pass
+|Quantity selector - decrement disabled |When the quantity is 1 the decrement button on the quantity selector is disabled for different products in the shopping bag | Clicked the decrement button on the quantity selector when at 1 for multiple items in the bag | pass
+|Quantity selector - increment disabled |When the quantity is 50 the increment button on the quantity selector is disabled for different products in the shopping bag | Clicked the increment button on the quantity selector when at 50 for multiple items in the bag | pass
+|Update button |When clicked the update button will update the quantity of the product or the custom order of the item that the quantity selector is associated with and the add to bag success toast message will be displayed | Changed the quantity of the custom order and clicked update and changed the quantity of the product and clicked update | pass
+|Remove button |When clicked the remove button will remove the product or the custom order from the bag and the add to bag success toast message will be displayed | Clicked the remove button of the custom order and a product | pass
+|Delivery charge |When items are added to the bag the delivery charge should be calculated at 10% of the grand total and displayed above the grand total on the shopping bag page |Added different items to the bag and checked the delivery charge | pass
+|Keep Shopping button |When clicked the Keep Shopping button will direct the user to the products page | Clicked the Keep Shopping button | pass
+|Secure Checkout button |When clicked the Secure Checkout button will direct the user to the checkout page | Clicked the Secure Checkout button | pass
+
