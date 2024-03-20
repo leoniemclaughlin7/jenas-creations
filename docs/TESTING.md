@@ -3,7 +3,7 @@
 ## Manual testing
 
 ### Register
- 
+
 |Feature  | Expect  | Action | Result |
 |--|--|--|--|
 |Sign in link |When clicked the sign in link will direct the user to the sign in page | Clicked the sign in link | pass 
@@ -13,6 +13,19 @@
 |Sign up - email miss match |When sign up form is submitted with emails that don't match then a pop up will detail 'You must type the same email each time.' | Submitted sign up form with emails that do not match | pass 
 |Sign up - username |When sign up form is submitted with a username that is already registered then a pop up will detail 'A user with that username already exists.' | Submitted sign up form with a username that is already registered | pass 
 |Sign up - password |When sign up form is submitted with passwords that don't match then a pop up will detail 'You must type the same password each time.' | Submitted sign up form with passwords that do not match | pass 
+
+### Login
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Sign up link |When clicked the sign up link will direct the user to the sign up page | Clicked the sign up link | pass 
+|Sign in with Google |When clicked the Google link will direct the user to the google sign in page and once an account is chosen it will log the user into the site | Clicked the Google link | pass
+|Sign in form |When valid information is submitted in the login form it will log that user into the site| Submitted login form with valid information | pass
+|Sign in form - success toast |When user is logged into the site a success toast will pop up detailing 'Successfully signed in as user'| Submitted login form | pass
+|Sign in form - incorrect login |If a users tries to use incorrect login details a pop up detailing 'The username and/or password you specified are not correct.'| Submitted login form with incorrect details | pass
+|Forgot password link |When clicked the forgot password link will direct the user to the password reset page | Clicked the forgot password link | pass 
+|Password reset form |When a valid email is submitted and the reset my password button is clicked a message detailing that an email has been sent to the user to reset password is displayed | Submit email in the password reset form | pass
+|Password reset form - incorrect email |When an invalid email is submitted and the reset my password button is clicked a message detailing 'The e-mail address is not assigned to any user account' is displayed | Submit  invalid email in the password reset form | pass
 
 ###  Main navigation Bar
 
