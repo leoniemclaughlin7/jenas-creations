@@ -18,6 +18,7 @@
     <!--Display items in shopping bag-->
     <div class="row">
         <div class="col">
+            <!--If items in bag_items loop through and display individual items-->
             {% if bag_items %}
             {% for item in bag_items %}
             <div class="row">
@@ -62,6 +63,7 @@
                         </div>
                     </div>
                 </div>
+                <!--Update and remove buttons for quantity in shopping bag-->
                 <button class="btn btn-main btn-sm rounded mt-2 mb-5">
                     Update
                 </button>
@@ -97,6 +99,7 @@
                     </span>
                 </a>
             </div>
+            <!--If bag_items is empty-->
             {% else %}
             <p>Your bag is empty.</p>
             <a href="{% url 'products' %}" class="btn btn-main rounded-0 btn-lg">

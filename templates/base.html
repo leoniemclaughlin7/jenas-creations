@@ -119,6 +119,7 @@
         <div class="text-center">
           <a class="nav-link shopping-bag-pos" href="{% url 'view_bag' %}"><i class="fa-solid fa-cart-shopping"></i>
             <p class="my-0">
+              <!--If grand_total is true show price else show 0.00-->
               {% if grand_total %}
               &euro;{{ grand_total|floatformat:2 }}
               {% else %}

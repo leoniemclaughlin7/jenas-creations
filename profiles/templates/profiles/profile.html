@@ -58,6 +58,7 @@
                             </a>
                         </div>
                         <div class="col-3">
+                            <!--Display items that where purchased-->
                             {% for item in order.lineitems.all %}
                             <p><strong>{{ item.product.name }}{{ item.custom_order.product_name }} x
                                     {{ item.quantity }}</strong></p>

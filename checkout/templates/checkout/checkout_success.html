@@ -27,6 +27,7 @@
           <p>Subtotal</p>
         </div>
       </div>
+      <!--Display items in order.lineitems-->
       {% for item in order.lineitems.all %}
       <div class="row">
         <div class="col-2">
@@ -99,4 +100,6 @@
         </tbody>
       </table>
     </div>
-    {% endblock %}
+  </div>
+</div>
+{% endblock %}
