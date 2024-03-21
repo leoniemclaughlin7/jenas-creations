@@ -9,6 +9,9 @@ MATERIALS = ((0, 'Polymer Clay'), (1, 'Gemstones and Crystals'), (2, 'Wire'),
 
 
 class CustomOrder(models.Model):
+    """
+    CustomOrder model
+    """
     category = models.ForeignKey(Category, null=False, blank=False,
                                  on_delete=models.CASCADE)
     material = models.IntegerField(choices=MATERIALS, blank=False)

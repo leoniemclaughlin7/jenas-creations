@@ -18,7 +18,13 @@ class Review(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        """
+        Orders reviews by created_on.
+        """
         ordering = ["created_on"]
 
     def __str__(self):
+        """
+        Returns body and name associated with the review.
+        """
         return f"Review {self.body} by {self.name}"

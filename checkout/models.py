@@ -9,6 +9,9 @@ import uuid
 
 
 class Order(models.Model):
+    """
+    Order model
+    """
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True,
                                      related_name='orders')
@@ -63,6 +66,9 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    OrderLineItem model
+    """
     order = models.ForeignKey(Order, null=False, blank=False,
                               on_delete=models.CASCADE,
                               related_name='lineitems')
@@ -88,4 +94,7 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
+        """
+        Returns order number.
+        """
         return f'Order number: {self.order.order_number}'

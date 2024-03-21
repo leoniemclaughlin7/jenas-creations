@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Contact(models.Model):
+    """
+    Contact model
+    """
     full_name = models.CharField(max_length=80, blank=False, null=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     message = models.TextField(blank=False, null=True)
