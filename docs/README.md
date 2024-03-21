@@ -432,92 +432,84 @@ DATABASES = {
 
 [back to top](#jenas-creations)
 
+# Credits
 
+## Images
 
+[Blue white gold bracelet](https://i.etsystatic.com/27283872/r/il/525dc1/2804553214/il_fullxfull.2804553214_nhj2.jpg)
 
+[Pastel White Bracelet](https://i.pinimg.com/originals/f1/9c/aa/f19caa86a38c7a3e06748852d209178c.jpg)
 
+[Pink Beige Bracelet](https://i.pinimg.com/originals/d0/0e/65/d00e65e5a757c741c6e2859c0bb02eb3.jpg)
 
+[Blue clay beaded bracelet](https://i.pinimg.com/originals/7d/16/4d/7d164df902d9ec8407acaeb8b191d08f.jpg)
 
+[Pastel beaded bracelet](https://i.pinimg.com/originals/f9/6b/83/f96b83ad835da2d7a8b52ded28a5222b.jpg)
 
+[White beaded bracelet](https://i.pinimg.com/originals/59/66/72/59667237b23aa86ed09c79e6b5726f9b.jpg)
 
+[Green Agate Bracelet](https://assets0.mirraw.com/images/6934949/image_zoom.jpeg?1555137275)
 
+[Green beaded bracelet](https://m.media-amazon.com/images/I/41Nnf+goGCL.AC_UL480_FMwebp_QL65_.jpg)
 
+[Multicoloured beaded bracelet](https://m.media-amazon.com/images/I/51OSJXrvY7L.AC_UL480_FMwebp_QL65_.jpg)
 
+[White heart phone charm](https://m.media-amazon.com/images/I/41Dl58NBIyL.AC_SL1200_.jpg)
 
+[Multicoloured heart phone charm](https://m.media-amazon.com/images/I/61RB2XZksQL.AC_UY327_FMwebp_QL65_.jpg)
 
+[Pink phone charm](https://m.media-amazon.com/images/I/41KD2QtLx1L.AC_UY327_QL65_.jpg)
 
+[Clear beaded phone charm](https://m.media-amazon.com/images/I/41iIKG0OtFL.AC_UY327_QL65_.jpg)
 
+[Blue earrings](https://tse2.mm.bing.net/th?id=OIP.GGT6wY-Ol-V8dXPSxEOASwHaF7&pid=Api&P=0&h=180)
 
+[Clay earrings](https://tse2.mm.bing.net/th?id=OIP.Z3xTA7IfeYTu3RI0N6NaGQHaHb&pid=Api&P=0&h=180)
 
+[Butterfly earrings](https://tse1.mm.bing.net/th?id=OIP.BsidtET6rAGPXQx6lQioJAHaId&pid=Api&P=0&h=180)
 
+[Heart earrings](https://tse2.mm.bing.net/th?id=OIP.fm7hSfSuuAy4EflCxy1IwAHaHa&pid=Api&P=0&h=180)
 
-# Credits 
-Connecting social accounts: https://www.marinamele.com/user-authentication-with-google-using-django-allauth
-Django order_by: https://stackoverflow.com/questions/9834038/django-order-by-query-set-ascending-and-descending 
-Django filter: https://www.w3schools.com/django/django_queryset_filter.php 
-overflow-wrap: https://www.w3schools.com/cssref/css3_pr_overflow-wrap.php
-Convert object: https://www.geeksforgeeks.org/convert-object-to-string-in-python/ 
-positive integer field: https://www.geeksforgeeks.org/positiveintegerfield-django-models/
-Clean method on django models: https://docs.djangoproject.com/en/5.0/ref/forms/validation/ 
-Save method django: https://docs.djangoproject.com/en/5.0/topics/db/models/
-Retrieving a single object with get(): https://docs.djangoproject.com/en/5.0/topics/db/queries/
-Python get method call: https://www.w3schools.com/python/ref_dictionary_get.asp
-Finding the average: https://docs.djangoproject.com/en/5.0/topics/db/aggregation/ 
-Toasts: https://getbootstrap.com/docs/5.3/components/toasts/#events
-Fix footer to bottom with flex: https://stackoverflow.com/questions/55541850/how-to-make-footer-stay-at-bottom-of-the-page-with-flex-box 
-ERD: https://www.wplogout.com/export-database-diagrams-erd-from-django/
+[Wire earrings](https://tse3.mm.bing.net/th?id=OIP.RtMWbbyhw076mNZRqglcLwHaGL&pid=Api&P=0&h=180)
 
+[Multicoloured beaded necklace](https://tse1.explicit.bing.net/th?id=OIP.S25_e6wwy0Lr7vZEhdsOjQHaHa&pid=Api&P=0&h=180)
 
+[Large bead necklace](https://tse1.mm.bing.net/th?id=OIP.vBH6ZjmBCKl8-Hc33gAmEgHaHa&pid=Api&P=0&h=180)
 
+[Blue beaded necklace](https://tse4.mm.bing.net/th?id=OIP.okybC0DHVP6FJ8Tx5x2hOQHaJ5&pid=Api&P=0&h=180)
 
+[Blue white beaded necklace](https://tse1.mm.bing.net/th?id=OIP.4lPxe2gW9elzY-YwdHp6uwHaJ4&pid=Api&P=0&h=180)
 
-# Images
+[White orange beaded necklace](https://i.etsystatic.com/31372540/r/il/86c6ce/3300985273/il_fullxfull.3300985273_3i39.jpg)
 
-## Braceletes
-https://i.etsystatic.com/27283872/r/il/525dc1/2804553214/il_fullxfull.2804553214_nhj2.jpg
+## Code
 
-https://i.pinimg.com/originals/f1/9c/aa/f19caa86a38c7a3e06748852d209178c.jpg
+[Connecting social accounts](https://www.marinamele.com/user-authentication-with-google-using-django-allauth)
 
-https://i.pinimg.com/originals/d0/0e/65/d00e65e5a757c741c6e2859c0bb02eb3.jpg
+[Django order_by](https://stackoverflow.com/questions/9834038/django-order-by-query-set-ascending-and-descending)
 
-https://i.pinimg.com/originals/7d/16/4d/7d164df902d9ec8407acaeb8b191d08f.jpg
+[Django filter](https://www.w3schools.com/django/django_queryset_filter.php)
 
-https://i.pinimg.com/originals/f9/6b/83/f96b83ad835da2d7a8b52ded28a5222b.jpg
+[Overflow-wrap](https://www.w3schools.com/cssref/css3_pr_overflow-wrap.php)
 
-https://i.pinimg.com/originals/59/66/72/59667237b23aa86ed09c79e6b5726f9b.jpg
+[Convert object](https://www.geeksforgeeks.org/convert-object-to-string-in-python/)
 
-https://assets0.mirraw.com/images/6934949/image_zoom.jpeg?1555137275
+[Positive integer field](https://www.geeksforgeeks.org/positiveintegerfield-django-models/)
 
-https://m.media-amazon.com/images/I/41Nnf+goGCL._AC_UL480_FMwebp_QL65_.jpg
+[Clean method on Django models](https://docs.djangoproject.com/en/5.0/ref/forms/validation/)
 
-https://m.media-amazon.com/images/I/51q0-VmHVyL._AC_UL480_FMwebp_QL65_.jpg
+[Save method Django](https://docs.djangoproject.com/en/5.0/topics/db/models/)
 
-https://m.media-amazon.com/images/I/51OSJXrvY7L._AC_UL480_FMwebp_QL65_.jpg
+[Finding the average](https://docs.djangoproject.com/en/5.0/topics/db/aggregation/)
 
-## phone charms
+[Toasts](https://getbootstrap.com/docs/5.3/components/toasts/#events)
 
-https://m.media-amazon.com/images/I/41Dl58NBIyL._AC_SL1200_.jpg
-https://m.media-amazon.com/images/I/61RB2XZksQL._AC_UY327_FMwebp_QL65_.jpg
-https://m.media-amazon.com/images/I/41gFO23fydL._AC_UY327_FMwebp_QL65_.jpg
-https://m.media-amazon.com/images/I/41KD2QtLx1L._AC_UY327_QL65_.jpg
-https://m.media-amazon.com/images/I/41iIKG0OtFL._AC_UY327_QL65_.jpg
+[Fix footer to bottom with flex](https://stackoverflow.com/questions/55541850/how-to-make-footer-stay-at-bottom-of-the-page-with-flex-box)
 
-## earrings
+[Generating ERD](https://www.wplogout.com/export-database-diagrams-erd-from-django/)
 
-https://tse2.mm.bing.net/th?id=OIP.GGT6wY-Ol-V8dXPSxEOASwHaF7&pid=Api&P=0&h=180
-https://tse2.mm.bing.net/th?id=OIP.Z3xTA7IfeYTu3RI0N6NaGQHaHb&pid=Api&P=0&h=180
-https://tse1.mm.bing.net/th?id=OIP.BsidtET6rAGPXQx6lQioJAHaId&pid=Api&P=0&h=180
-https://tse2.mm.bing.net/th?id=OIP.fm7hSfSuuAy4EflCxy1IwAHaHa&pid=Api&P=0&h=180
-https://tse3.mm.bing.net/th?id=OIP.RtMWbbyhw076mNZRqglcLwHaGL&pid=Api&P=0&h=180
+# Acknowledgements
 
-## necklaces
-https://tse1.explicit.bing.net/th?id=OIP.ar88vVAbALTNiKY85s_TqAHaFj&pid=Api&P=0&h=180
+I would like to thank my mentor Lauren-Nicole Popich, my cohort facilitator Alan Bushell, the Code Institute team and the Slack community.
 
-https://tse1.explicit.bing.net/th?id=OIP.S25_e6wwy0Lr7vZEhdsOjQHaHa&pid=Api&P=0&h=180
-https://tse1.mm.bing.net/th?id=OIP.vBH6ZjmBCKl8-Hc33gAmEgHaHa&pid=Api&P=0&h=180
-https://tse4.mm.bing.net/th?id=OIP.okybC0DHVP6FJ8Tx5x2hOQHaJ5&pid=Api&P=0&h=180
-https://tse1.mm.bing.net/th?id=OIP.4lPxe2gW9elzY-YwdHp6uwHaJ4&pid=Api&P=0&h=180
-
-
-
-
+[back to top](#jenas-creations)
