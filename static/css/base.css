@@ -345,12 +345,9 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .text-overlay h2 {
-        font-size: 80%;
-    }
 
     .text-overlay a {
-        margin-top: 50px;
+        margin-top: 70px;
     }
 
     #quantity-form {
