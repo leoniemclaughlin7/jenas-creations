@@ -273,6 +273,12 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
  
 <img src="../docs/readme_images/toasts.png">
 
+### 404 page 
+ 
+* A 404.html page will be displayed when the user tries to access a page that is unavailable. 
+ 
+<img src="../docs/readme_images/404.png">
+
 ## Future features
 
 There are a number of future features which could be implemented as part of this project.
@@ -366,6 +372,7 @@ All known bugs have been fixed, below is a list of bugs encountered and how they
 |Toasts where not displaying |fixed |I was using the incorrect JavaScript for the version of Bootstrap toasts that I was using. I corrected the JavaScript by following along with the Bootstrap documentation. |
 |The average of the the stars left by users in the review section was not displaying |fixed |Resolved by using aggregation to get the average of all the star ratings left by users.|
 |Review form not displaying |fixed |Resolved by moving the rendering of the review form into the product detail view as this was rendering the product_detail.html template.|
+|Toast JavaScript error in console| unfixed |The error is related to the Bootstrap JavaScript file for toasts|
 
 # Deployment 
 
