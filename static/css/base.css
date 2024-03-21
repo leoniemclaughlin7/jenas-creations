@@ -350,7 +350,7 @@ footer {
     }
 
     .text-overlay button {
-        width: 100px;
+        width: 70px;
         height: 60px;
         font-size: 100%;
     }
@@ -375,5 +375,11 @@ footer {
 @media (max-width: 375px) {
     .message-container {
         width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    .user-messages-pos {
+        margin-top: 15px;
     }
 }

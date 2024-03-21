@@ -46,9 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     handleEnableDisable(productId);
   });
 
-});
-
-document.addEventListener('DOMContentLoaded', function () {
   // JavaScript to enable bootstrap toast notifications. 
   var toasts = document.querySelector('.toast');
   var toast = new bootstrap.Toast(toasts);

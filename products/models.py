@@ -35,6 +35,6 @@ class Product(models.Model):
 
     def __str__(self):
         """
-        Returns product name
+        Returns product name.
         """
         return self.name
