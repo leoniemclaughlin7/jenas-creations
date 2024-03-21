@@ -2,6 +2,8 @@
 
 ## Manual testing
 
+Testing of the functionality of the website can be seen in the following tables. Each section of the website has been tested according to the feature on the deployed site. Testing different devices and screen resolutions has been conducted using Google DevTools.
+
 ### Register
 
 |Feature  | Expect  | Action | Result |
@@ -231,6 +233,27 @@
 |Sign out button |When sign out button is clicked the user will be signed out and directed to the home page | Clicked sign out button| pass
 |Logout - success toast |When signed out a success message will detail 'Successfully signed out' | Clicked sign out button| pass
 
+### Responsiveness
+
+|Feature  | Expect  | Action | Result |
+|--|--|--|--|
+|Register page |When the screen resolution is changed the register page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Login page |When the screen resolution is changed the login page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Navigation bar |When the screen resolution is changed the navigation bar is responsive | Checked the responsiveness at different screen resolutions| pass
+|Home page |When the screen resolution is changed the home page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Products page |When the screen resolution is changed products page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Product detail page |When the screen resolution is changed the product detail page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Edit review |When the screen resolution is changed the edit review page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Shopping bag page |When the screen resolution is changed the shopping bag page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Checkout page |When the screen resolution is changed the checkout page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Checkout success page |When the screen resolution is changed the checkout success page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Profile page |When the screen resolution is changed the profile page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Admin area |When the screen resolution is changed the admin area is responsive | Checked the responsiveness at different screen resolutions| pass
+|Edit product |When the screen resolution is changed the edit product page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Contact us |When the screen resolution is changed the contact us page is responsive | Checked the responsiveness at different screen resolutions| pass
+|Footer |When the screen resolution is changed the footer is responsive | Checked the responsiveness at different screen resolutions| pass
+|Logout page |When the screen resolution is changed the logout page is responsive | Checked the responsiveness at different screen resolutions| pass
+
 ## Validator Testing
 
 ### HTML
@@ -309,7 +332,7 @@ urls.py
 views.py
 <img  src="../docs/testing_images/custom-order-views.png">
 
-#### home app
+#### Home app
  
 urls.py
 <img  src="../docs/testing_images/home-urls.png">
