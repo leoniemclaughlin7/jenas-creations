@@ -6,6 +6,8 @@ A live version of the project can be accessed here: [Jenas Creations](https://je
 
 <img src="../docs/readme_images/jenas-creations-mockup.png">
 
+To navigate this file please use the built in table of contents.
+
 # User Experience Design
 
 ## User Demographic
