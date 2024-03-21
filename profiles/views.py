@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import UserProfile
 from .forms import UserProfileForm
 from django.contrib import messages
@@ -15,9 +15,9 @@ def profile(request):
     """
     profile = get_object_or_404(UserProfile, user=request.user)
 
-    if profile != request.user:
+    if profile.user != request.user:
         messages.error(request, 'Request denied! You do not have '
-                       'authorisation to add products.')
+                       'authorisation to visit this page.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
