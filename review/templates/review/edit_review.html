@@ -4,21 +4,21 @@
 {% block content %}
 <!--Edit review header-->
 <section>
-    <div class="conatiner">
+    <div class="container">
         <div class="row">
-            <div>
+            <div class="col-12 col-md-6">
                 <hr>
-                <h2>Edit Review:</h2>
+                <h2>Edit Review</h2>
                 <hr>
             </div>
-            <!--Edit review form-->
-            <div class="col-12 col-lg-6 d-flex justify-content-center">
-                <form method="post" action="{% url 'edit_review' review.id %}">
-                    {{ form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-lg submit-button" aria-label="Submits review">Update</button>
-                </form>
-            </div>
+        </div>
+        <!--Edit review form-->
+        <div class="col-12 col-lg-6 d-flex justify-content-center">
+            <form method="post" action="{% url 'edit_review' review.id %}">
+                {{ form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-lg btn-main mt-3" aria-label="Submits review">Update</button>
+            </form>
         </div>
     </div>
 </section>

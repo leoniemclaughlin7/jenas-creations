@@ -378,7 +378,7 @@ footer {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .user-messages-pos {
         margin-top: 15px;
     }
