@@ -352,6 +352,7 @@ footer {
     .text-overlay button {
         width: 60px;
         height: 30px;
+        font-size: 100%;
     }
 
     .text-overlay a {
