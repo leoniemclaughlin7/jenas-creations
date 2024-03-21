@@ -15,6 +15,11 @@ def profile(request):
     """
     profile = get_object_or_404(UserProfile, user=request.user)
 
+    if profile != request.user:
+        messages.error(request, 'Request denied! You do not have '
+                       'authorisation to add products.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -36,10 +41,12 @@ def profile(request):
     return render(request, 'profiles/profile.html', context)
 
 
+@login_required
 def order_history(request, order_number):
     """
     A view to return the order history for a specific users order.
     """
+
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
