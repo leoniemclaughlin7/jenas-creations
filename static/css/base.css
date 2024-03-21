@@ -350,13 +350,7 @@ footer {
     }
 
     .text-overlay button {
-        width: 70px;
-        height: 60px;
-        font-size: 150%;
-    }
-
-    .text-overlay a {
-        font-size: 7px;
+        margin-top: 50px;
     }
 
     #quantity-form {
