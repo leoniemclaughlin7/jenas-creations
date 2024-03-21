@@ -374,3 +374,9 @@ footer {
         margin-top: 15px;
     }
 }
+
+@media (max-width: 575px) {
+    img {
+        max-width: 100%;
+    }
+}
