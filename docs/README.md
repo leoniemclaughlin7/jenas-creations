@@ -78,7 +78,7 @@ The colour palette for this website was created using [Coolors](https://coolors.
 
 ### Typography 
 
-The fonts for the site where imported from Google fonts. For the headings [Madimi One](https://fonts.google.com/specimen/Madimi+One) was used. This font was chosen as it fit the aesthetic of the site, it has a homemade feel to it and complemented other design features. The font also has a second font of Sans-Serif set in case the chosen font dose not work on the users browser.  
+The fonts for the site where imported from Google fonts. For the headings [Madimi One](https://fonts.google.com/specimen/Madimi+One) was used. This font was chosen as it fit the aesthetic of the site, it has a homemade feel to it and complemented other design features. The font also has a second font of Sans-Serif set in case the chosen font does not work on the users browser.  
 
 # Agile
 
@@ -101,6 +101,7 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 * <b>HTML</b> - HTML was used to develop the templates in this project.
 * <b>CSS</b> - Custom CSS was created to aid with the styling of Jenas Creations.
 * <b>JavaScript</b> - Custom JavaScript was used in the development of this site.
+* <b>Amazon Web Services</b> - To host the static and media files in deployment.
 
 # Features
 
@@ -214,7 +215,7 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 
 * The checkout success page first thanks the user for their order. This is followed by order confirmation details, such as order number, date and confirmation of the email in which the email confirmation will be sent.
 * Under this section there is a summary of the order placed, keeping the user informed about what they have purchased. 
-* The final section is a confirmation of the shoppers delivery address.
+* The final section is confirmation of the shoppers delivery address.
 
 <img src="../docs/readme_images/checkout-success.png">
 
@@ -254,7 +255,7 @@ Jenas Creations was developed using Agile Development Methodology. A detailed ov
 ### Footer 
 
 * The footer is evident on all pages of the site.
-* The footer contains copyright information, links to the Facebook and Instagram page, a contact us link and a subscription box via Mailchimp for email marketing purposes.
+* The footer contains copyright information, links to the Facebook and Instagram pages, a contact us link and a subscription box via Mailchimp for email marketing purposes.
 
 <img src="../docs/readme_images/footer.png">
 
@@ -292,7 +293,7 @@ These include:
 3. A wish list. As a nice to have, a wish list would allow users to add items to their list which they can checkout at a later date. This would improve the overall usability of the site and add nice additional functionality.  
 4. The ability to like products. As a future feature having the ability of the user to like or favourite products would be a nice addition to have, as it adds a more personal touch to the site. 
 5. More profile information. It would be nice to allow users to create more profile information such as a profile picture, change their password or email. 
-6. Free delivery threshold. As a future feature a fee delivery threshold could be added to reward users that are willing to spend a certain amount of money at Jenas creations.
+6. Free delivery threshold. As a future feature a free delivery threshold could be added to reward users that are willing to spend a certain amount of money at Jenas creations.
 
 # E-commerce business model
 
@@ -358,8 +359,6 @@ Jenas Creations was tested using manual testing methodology. A detailed overview
 [back to top](#jenas-creations)
 
 # known Bugs
-
-All known bugs have been fixed, below is a list of bugs encountered and how they have been fixed.
 
 |Bug  | Status | Solution  |
 |--|--|--|

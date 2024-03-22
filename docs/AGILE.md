@@ -86,7 +86,7 @@ This epic is associated with users of the site having the ability to checkout th
 
 <br/>
 
-This epic resulted in users of the site having the ability to sort products by price, either low to high or high to low. Displayed categories that the shopper is browsing in the navigation bar. It also handled the ability to search the site for keywords that would be found in the product name or description. 
+This epic resulted in users of the site having the ability to sort products by price, either low to high or high to low. Displaying categories that the shopper is browsing in the navigation bar. It also handled the ability to search the site for keywords that would be found in the product name or description. 
 
 <img src="../docs/agile_images/epic-sorting-and-searching-products.png">
 
@@ -94,7 +94,7 @@ This epic resulted in users of the site having the ability to sort products by p
 
 <br/>
 
-This epic was associated with allowing users to create an account on the site. Users will be sent an email when the register for an account. Users can sign in using their google account and a forgotten password link is available to users. 
+This epic was associated with allowing users to create an account on the site. Users will be sent an email when they register for an account. Users can sign in using their google account and a forgotten password link is available to users. 
 
 <img src="../docs/agile_images/epic-account-registration.png">
 
